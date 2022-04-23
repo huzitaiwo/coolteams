@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Select from 'react-select'
 import { useCollection } from '../../hooks/useCollection'
 import { useTheme } from '../../hooks/useTheme'
@@ -16,8 +16,8 @@ const categories = [
 
 export default function Create() {
   const { documents } = useCollection('users')
+  const [users, setUsers] = useState([])
   const { mode } = useTheme()
-  console.log(documents)
 
   // form field values
   const [name, setName] = useState('')
@@ -26,6 +26,15 @@ export default function Create() {
   const [category, setCategory] = useState('')
   const [assignedUsers, setAssignedUsers] = useState([])
   const [formError, setFormError] = useState(null)
+
+  useEffect(() => {
+    if (documents) {
+      const options = documents.map(user => {
+        return { value: user, label: user.displayName}
+      })
+      setUsers(options)
+    }
+  }, [documents])
 
   const handleSubmit = e => {
     e.preventDefault()
