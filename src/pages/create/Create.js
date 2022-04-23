@@ -17,6 +17,7 @@ const categories = [
 export default function Create() {
   const { documents } = useCollection('users')
   const { mode } = useTheme()
+  console.log(documents)
 
   // form field values
   const [name, setName] = useState('')
