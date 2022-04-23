@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { useTheme } from '../../hooks/useTheme'
 import { useLogin } from '../../hooks/useLogin'
 
@@ -46,6 +47,11 @@ export default function Login() {
       {!isPending && <button className={`btn ${mode}`}>Login</button>}
       {isPending && <button disabled className={`btn ${mode}`}>Loging in...</button>}
       {error && <div className='error'>{error}</div>}
+
+      <div className='account'>
+        <p>Don't have an account yet?</p>
+        <Link to='/signup'>Create an account</Link>
+      </div>
     </form>
   )
 }
