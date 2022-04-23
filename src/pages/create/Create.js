@@ -96,7 +96,7 @@ export default function Create() {
           />
         </label>
 
-        <button className={`btn ${mode}`}>Add</button>
+        <button className={`btn ${mode}`}>Add Project</button>
       </form>
     </div>
   )
