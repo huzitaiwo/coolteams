@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Select from 'react-select'
+import { useCollection } from '../../hooks/useCollection'
 import { useTheme } from '../../hooks/useTheme'
 
 // styles
@@ -14,6 +15,7 @@ const categories = [
 ]
 
 export default function Create() {
+  const { documents } = useCollection('users')
   const { mode } = useTheme()
 
   // form field values
@@ -71,13 +73,16 @@ export default function Create() {
           <span>Project Category:</span>
           <Select
             onChange={option => setCategory(option)}
-            option={categories}
+            options={categories}
           />
         </label>
 
         <label>
           <span>Assign to:</span>
           {/* category select here */}
+          {/* <Select
+            options={}
+          /> */}
         </label>
 
         <button className={`btn ${mode}`}>Add</button>

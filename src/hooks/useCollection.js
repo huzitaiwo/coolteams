@@ -6,8 +6,8 @@ export const useCollection = (collection, _query, _orderBy) => {
   const [error, setError] = useState(null)
   const [isPending, setIsPending] = useState(false)
 
-   // if we don't use a ref --> infinite loop in useEffect
-   // _query, oderBy is an array and is "different" on every function call
+  // if we don't use a ref --> infinite loop in useEffect
+  // _query, oderBy is an array and is "different" on every function call
   const query = useRef(_query).current
   const orderBy = useRef(_orderBy).current
 
