@@ -107,6 +107,7 @@ export default function Create() {
         </label>
 
         <button className={`btn ${mode}`}>Add Project</button>
+        {formError && <div className='error'>{formError}</div>}
       </form>
     </div>
   )
