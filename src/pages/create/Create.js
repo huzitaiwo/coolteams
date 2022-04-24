@@ -17,9 +17,10 @@ const categories = [
 ]
 
 export default function Create() {
+  const { mode } = useTheme()
+  const { user } = useAuthContext()
   const { documents } = useCollection('users')
   const [users, setUsers] = useState([])
-  const { mode } = useTheme()
 
   // form field values
   const [name, setName] = useState('')
@@ -51,13 +52,18 @@ export default function Create() {
       setFormError('Please assign the project to at least one user')
     }
 
+    const createdBy = {
+      displayName: user.displayName,
+      photoURL: user.photoURL,
+      id: user.uid
+    }
+
     const project = {
       name,
       details,
       category: category.value,
       dueDate: timestamp.fromDate(new Date(dueDate)),
       comments: [],
-      createdBy
     }
 
     console.log(name, details, dueDate, category.value, assignedUsers)
