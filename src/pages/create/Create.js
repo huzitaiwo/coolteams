@@ -76,7 +76,7 @@ export default function Create() {
       assignedUsersList
     }
 
-    console.log(name, details, dueDate, category.value, assignedUsers)
+    console.log(project)
   }
 
   return (
