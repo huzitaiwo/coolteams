@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import Select from 'react-select'
 import { useCollection } from '../../hooks/useCollection'
+import { useAuthContext } from '../../hooks/useAuthContext'
 import { timestamp } from '../../firebase/config'
 import { useTheme } from '../../hooks/useTheme'
 
@@ -54,7 +55,9 @@ export default function Create() {
       name,
       details,
       category: category.value,
-      dueDate: timestamp.fromDate(new Date(dueDate))
+      dueDate: timestamp.fromDate(new Date(dueDate)),
+      comments: [],
+      createdBy
     }
 
     console.log(name, details, dueDate, category.value, assignedUsers)
