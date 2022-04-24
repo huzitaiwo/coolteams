@@ -48,6 +48,14 @@ export default function Create() {
     if (assignedUsers.length < 1) {
       setFormError('Please assign the project to at least one user')
     }
+
+    const project = {
+      name,
+      details,
+      category: category.value,
+      
+    }
+
     console.log(name, details, dueDate, category.value, assignedUsers)
   }
 
