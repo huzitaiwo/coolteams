@@ -42,11 +42,7 @@ export default function Create() {
       setUsers(options)
     }
 
-    if (response.success) {
-      history.push('/')
-    }
-
-  }, [documents, history, response.success])
+  }, [documents])
 
   const handleSubmit = async e => {
     e.preventDefault()
