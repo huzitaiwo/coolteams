@@ -21,6 +21,11 @@
 }
 
 /* __________global styles__________ */
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+}
 .page-title {
   font-size: 1.3rem;
   color: #4B5563;
@@ -28,11 +33,6 @@
 }
 .page-title.dark {
   color: #E3E4E4;
-}
-button {
-  cursor: pointer;
-  background: none;
-  border: none;
 }
 header,
 .sidebar {
@@ -69,4 +69,15 @@ header.dark,
 .btn.dark:hover {
   color: #fff;
   background-color: #FD413C;
+}
+.account {
+  margin-top: 30px;
+}
+.account p {
+  border-bottom: 1px solid #4B5563;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+.account a {
+  color: #FD7B38;
 }
