@@ -45,7 +45,7 @@ export default function Create() {
     if (response.success) {
       history.push('/')
     }
-  }, [documents])
+  }, [documents, history])
 
   const handleSubmit = e => {
     e.preventDefault()
