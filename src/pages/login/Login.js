@@ -48,7 +48,7 @@ export default function Login() {
       {isPending && <button disabled className={`btn ${mode}`}>Loging in...</button>}
       {error && <div className='error'>{error}</div>}
 
-      <div className='account'>
+      <div className={`account ${mode}`}>
         <p>Don't have an account yet?</p>
         <Link to='/signup'>Create an account</Link>
       </div>
