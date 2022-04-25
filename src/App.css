@@ -74,10 +74,16 @@ header.dark,
   margin-top: 30px;
 }
 .account p {
-  border-bottom: 1px solid #4B5563;
-  padding-bottom: 5px;
+  border-bottom: 1px solid #E3E4E4;
+  padding-bottom: 3px;
   margin-bottom: 10px;
 }
 .account a {
   color: #FD7B38;
+}
+.account.dark p {
+  border-bottom: 1px solid #5F6365;
+}
+.account.dark a {
+  color: #FD413C;
 }
