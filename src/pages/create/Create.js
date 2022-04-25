@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react'
+import { useHistory } from 'react-router-dom'
 import Select from 'react-select'
 import { useCollection } from '../../hooks/useCollection'
+import { useFirestore } from '../../hooks/useFirestore'
 import { useAuthContext } from '../../hooks/useAuthContext'
 import { timestamp } from '../../firebase/config'
 import { useTheme } from '../../hooks/useTheme'
@@ -20,7 +22,9 @@ export default function Create() {
   const { mode } = useTheme()
   const { user } = useAuthContext()
   const { documents } = useCollection('users')
+  const { addDocument, response } = useFirestore('projects')
   const [users, setUsers] = useState([])
+  const history = useHistory()
 
   // form field values
   const [name, setName] = useState('')
@@ -36,6 +40,10 @@ export default function Create() {
         return { value: user, label: user.displayName}
       })
       setUsers(options)
+    }
+
+    if (response.success) {
+      history.push('/')
     }
   }, [documents])
 
@@ -76,7 +84,7 @@ export default function Create() {
       assignedUsersList
     }
 
-    console.log(project)
+    addDocument(project)
   }
 
   return (
@@ -134,7 +142,8 @@ export default function Create() {
           />
         </label>
 
-        <button className={`btn ${mode}`}>Add Project</button>
+        {response.isPending && <button disabled className={`btn ${mode}`}>adding project...</button>}
+        {!response.isPending && <button className={`btn ${mode}`}>Add Project</button>}
         {formError && <div className='error'>{formError}</div>}
       </form>
     </div>
