@@ -45,9 +45,10 @@ export default function Create() {
     if (response.success) {
       history.push('/')
     }
+
   }, [documents, history, response.success])
 
-  const handleSubmit = e => {
+  const handleSubmit = async e => {
     e.preventDefault()
 
     setFormError(null)
@@ -84,7 +85,7 @@ export default function Create() {
       assignedUsersList
     }
 
-    addDocument(project)
+    await addDocument(project)
   }
 
   return (
