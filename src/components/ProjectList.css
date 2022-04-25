@@ -12,6 +12,12 @@
   object-fit: cover;
   border-radius: 10px;
 }
+.project-redirect a {
+  color: #FD7B38;
+}
+.project-redirect.dark a {
+  color: #FD413C;
+}
 .card {
   display: block;
   text-decoration: none;

@@ -13,7 +13,7 @@ export default function Dashboard() {
     return <div className='error'>{error}</div>
   }
   if (isPending) {
-    return <h2>loading...</h2>
+    return <h4>loading...</h4>
   }
 
   return (

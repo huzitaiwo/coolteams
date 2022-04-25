@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { useTheme } from '../hooks/useTheme'
 import placeholderImage from '../assets/image/booking.png'
 
 // styles and components
@@ -6,14 +7,16 @@ import './ProjectList.css'
 import Avatar from './Avatar'
 
 export default function ProjectList({ projects }) {
+  const { mode } = useTheme()
+
   if (projects.length === 0) {
-    return <p>No projects yet! Add a new project <Link to='/create'>here</Link></p>
+    return <p className={`project-redirect ${mode}`}>No projects yet! Add a new project <Link to='/create'>here</Link></p>
   }
   return (
     <div className='project-list'>
       {projects.map(project => (
         <Link className='card' to={ `/projects/${project.id}`} key={project.id}>
-          <img className='project-image' src={placeholderImage} alt="placeholder image" />
+          <img className='project-image' src={placeholderImage} alt="placeholder" />
           <h4>{project.name}</h4>
           <p>These project will need a brand new identity.</p>
           <div className='assigned-to'>
