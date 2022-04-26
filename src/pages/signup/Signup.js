@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { useTheme } from '../../hooks/useTheme'
 import { useSignup } from '../../hooks/useSignup'
 
@@ -96,7 +97,7 @@ export default function Signup() {
 
       <div className='account'>
         <p>Already have an account?</p>
-        <Link to='/signup'>Login</Link>
+        <Link to='/login'>Login</Link>
       </div>
     </form>
   )
