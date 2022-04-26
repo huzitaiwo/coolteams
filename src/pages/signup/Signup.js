@@ -93,6 +93,11 @@ export default function Signup() {
       {!isPending && <button className={`btn ${mode}`}>Sign up</button>}
       {isPending && <button disabled className={`btn ${mode}`}>Signing up...</button>}
       {error && <div className='error'>{error}</div>}
+
+      <div className='account'>
+        <p>Already have an account?</p>
+        <Link to='/signup'>Login</Link>
+      </div>
     </form>
   )
 }
