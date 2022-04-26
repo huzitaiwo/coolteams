@@ -10,8 +10,10 @@ export default function ProjectList({ projects }) {
   return (
     <div>
       {projects.map(project => (
-        <Link key={project.id}>{project.name}
-          
+        <Link to={ `/projects/${project.id}`} key={project.id}>
+          <h4>{project.name}</h4>
+          <p>These project will need a brand new identity.</p>
+          <p className='success'>Due by: {project.dueDate.toDate().toDateString()}</p>
         </Link>
       ))}
     </div>
