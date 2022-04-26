@@ -8,7 +8,9 @@ export default function ProjectList({ projects }) {
   }
   return (
     <div>
-      
+      {projects.map(project => (
+        <div key={project.id}>{project.name}</div>
+      ))}
     </div>
   )
 }
