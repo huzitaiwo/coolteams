@@ -1,5 +1,6 @@
-// styles
 import { Link } from 'react-router-dom'
+
+// styles
 import './ProjectList.css'
 
 export default function ProjectList({ projects }) {
@@ -9,7 +10,9 @@ export default function ProjectList({ projects }) {
   return (
     <div>
       {projects.map(project => (
-        <div key={project.id}>{project.name}</div>
+        <Link key={project.id}>{project.name}
+          
+        </Link>
       ))}
     </div>
   )
