@@ -1,8 +1,14 @@
 // styles
+import { Link } from 'react-router-dom'
 import './ProjectList.css'
 
-export default function ProjectList() {
+export default function ProjectList({ projects }) {
+  if (projects.length === 0) {
+    return <p>No projects yet! Add a new project <Link to='/create'>here</Link></p>
+  }
   return (
-    <div>ProjectList</div>
+    <div>
+      
+    </div>
   )
 }
