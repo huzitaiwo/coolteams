@@ -83,7 +83,7 @@ export default function Create() {
 
     await addDocument(project)
 
-    if (response.success) {
+    if (!response.error) {
       history.push('/')
     }
   }
