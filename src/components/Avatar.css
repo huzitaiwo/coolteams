@@ -5,7 +5,10 @@
   border-radius: 50%;
   overflow: hidden;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  background: #eee;
+  background: #F7F6F4;
+}
+.avatar.dark {
+  background: #4B5563;
 }
 .avatar img {
   width: 100%;
