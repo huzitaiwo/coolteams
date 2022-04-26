@@ -1,10 +1,12 @@
 import ProjectList from '../../components/ProjectList'
 import { useCollection } from '../../hooks/useCollection'
+import { useTheme } from '../../hooks/useTheme'
 
 // styles
 import './Dashboard.css'
 
 export default function Dashboard() {
+  const { mode } = useTheme()
   const { documents, isPending, error } = useCollection('projects')
 
   if (error) {
@@ -16,7 +18,7 @@ export default function Dashboard() {
 
   return (
     <div>
-      <h2 className='page-title'>Dashboard</h2>
+      <h2 className={`page-title ${mode}`}>Dashboard</h2>
       {documents && <ProjectList projects={documents} />}
     </div>
   )
