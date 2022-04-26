@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom'
-import { Avatar } from './Avatar'
 
-// styles
+// styles and components
 import './ProjectList.css'
+import Avatar from './Avatar'
 
 export default function ProjectList({ projects }) {
   if (projects.length === 0) {
