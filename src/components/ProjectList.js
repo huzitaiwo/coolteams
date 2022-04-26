@@ -13,6 +13,9 @@ export default function ProjectList({ projects }) {
         <Link to={ `/projects/${project.id}`} key={project.id}>
           <h4>{project.name}</h4>
           <p>These project will need a brand new identity.</p>
+          <div className='assigned-to'>
+            <small>{project.assignedUsersList}</small>
+          </div>
           <p className='success'>Due by: {project.dueDate.toDate().toDateString()}</p>
         </Link>
       ))}
