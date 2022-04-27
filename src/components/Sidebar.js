@@ -11,7 +11,7 @@ export default function Sidebar() {
       <div className="logo">Logo here</div>
       <nav>
         <ul className="navigation-links">
-          <li><NavLink className="active" to="/">Dashboard</NavLink></li>
+          <li><NavLink exact to="/">Dashboard</NavLink></li>
           <li><NavLink to="/projects">Projects</NavLink></li>
           <li><NavLink to="/task">My Task</NavLink></li>
           <li><NavLink to="/calender">Calender</NavLink></li>

@@ -23,7 +23,7 @@ function App() {
             <Route exact path='/'>
               <Dashboard />
             </Route>
-            <Route path='/project'>
+            <Route path='/projects'>
               <Projects />
             </Route>
             <Route path='/task'>
