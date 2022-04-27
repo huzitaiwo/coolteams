@@ -1,0 +1,8 @@
+.App {
+  min-height: 100vh;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 30px;
+  background: #F7F6F4;
+}

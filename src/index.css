@@ -18,6 +18,13 @@ code {
     monospace;
 }
 
+header,
+.sidebar {
+  background: #fff;
+  padding: 15px;
+  border-radius: 1rem;
+  
+}
 .error {
   color: red;
   background: pink;
