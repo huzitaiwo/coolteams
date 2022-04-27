@@ -9,11 +9,13 @@ import Projects from './pages/projects/Projects'
 import Project from './pages/project/Project'
 import Task from './pages/task/Task'
 import Navbar from './components/Navbar'
+import Sidebar from './components/Sidebar'
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
+      <Sidebar />
       <div className="content">
         <Navbar />
         <main>

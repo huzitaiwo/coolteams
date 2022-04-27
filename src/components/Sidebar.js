@@ -5,7 +5,7 @@ import React from 'react'
 
 export default function Sidebar() {
   return (
-    <div>
+    <div className='sidebar'>
       <div className="logo">Logo here</div>
       <nav>
         <ul className="navigation-links">
