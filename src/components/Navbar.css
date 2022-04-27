@@ -1,0 +1,33 @@
+header {
+  height: 7vh;
+  display: flex;
+  align-items: center;
+  padding: 5px 15px;
+  margin-bottom: 20px;
+}
+form.search {
+  margin-right: auto;
+  background: #f1f1f1;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+}
+form.search input {
+  width: 100%;
+  display: block;
+  outline: none;
+  border: none;
+  background: none;
+}
+.avatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.avatar img {
+  width: 100%;
+}
+.notification {
+  margin: 0 20px;
+}
