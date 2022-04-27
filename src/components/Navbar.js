@@ -9,7 +9,6 @@ import Avatar from './Avatar'
 export default function Navbar() {
   const { user } = useAuthContext()
   const { mode } = useTheme()
-  const { logout, isPending, error } = useLogout()
 
   return (
     <header className={mode}>
@@ -22,10 +21,6 @@ export default function Navbar() {
         </svg>
       </button>
       <Avatar src={user.photoURL}/>
-      
-      {/* {!isPending && <button onClick={logout} className={`btn ${mode}`}>Logout</button>}
-      {isPending && <button onClick={logout} className={`btn ${mode}`}>Loging out...</button>}
-      {error && <div className='error'>{error}</div>} */}
     </header>
   )
 }
