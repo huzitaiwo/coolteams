@@ -6,14 +6,20 @@
 }
 .navigation-links li {
   list-style: none;
+  margin-bottom: 20px;
 } 
 .navigation-links a {
   text-decoration: none;
   display: block;
-  padding: 20px 15px;
+  padding: 10px;
+  border-right: 4px solid none;
   text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.1rem;
 }
 .navigation-links a.active {
-  background: pink;
-  color: rgb(224, 42, 42);
+  /* background: #FFF3ED; */
+  background: linear-gradient(to right, #FFFCFA, #FFF3EA);
+  color: #FD8B51;
+  border-right: 4px solid #FD8B51;
 }

@@ -1,3 +1,5 @@
+import { NavLink } from 'react-router-dom'
+
 // styles
 import './Sidebar.css'
 
@@ -9,11 +11,11 @@ export default function Sidebar() {
       <div className="logo">Logo here</div>
       <nav>
         <ul className="navigation-links">
-          <li><a className="active" href="#">Dashboard</a></li>
-          <li><a href="#">Projects</a></li>
-          <li><a href="#">My Task</a></li>
-          <li><a href="#">Calender</a></li>
-          <li><a href="#">Settings</a></li>
+          <li><NavLink className="active" to="/">Dashboard</NavLink></li>
+          <li><NavLink to="/projects">Projects</NavLink></li>
+          <li><NavLink to="/task">My Task</NavLink></li>
+          <li><NavLink to="/calender">Calender</NavLink></li>
+          <li><NavLink to="/settings">Settings</NavLink></li>
         </ul>
       </nav>
     </div>
