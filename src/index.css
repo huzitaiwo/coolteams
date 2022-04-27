@@ -22,8 +22,7 @@ header,
 .sidebar {
   background: #fff;
   padding: 15px;
-  border-radius: 1rem;
-  
+  border-radius: 0.5rem;
 }
 .error {
   color: red;

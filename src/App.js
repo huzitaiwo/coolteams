@@ -4,10 +4,10 @@ import { BrowserRouter, Switch as Routes, Route } from 'react-router-dom'
 import './App.css'
 
 // pages && components
-import Dashboard from './pages/Dashboard'
-import Projects from './pages/Projects'
-import Project from './pages/Project'
-import Task from './pages/Task'
+import Dashboard from './pages/dashboard/Dashboard'
+import Projects from './pages/projects/Projects'
+import Project from './pages/project/Project'
+import Task from './pages/task/Task'
 import Navbar from './components/Navbar'
 
 function App() {
