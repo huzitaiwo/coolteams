@@ -8,6 +8,12 @@
   list-style: none;
   margin-bottom: 20px;
 } 
+.navigation-links svg {
+  margin-right: 10px;
+}
+.navigation-links a.active svg {
+  stroke: #FD8B51;
+}
 .navigation-links a {
   text-decoration: none;
   display: block;
@@ -15,10 +21,11 @@
   border-right: 4px solid none;
   text-transform: uppercase;
   font-weight: 500;
+  display: flex;
+  align-items: center;
 }
 .navigation-links a.active {
-  /* background: #FFF3ED; */
-  background: linear-gradient(to right, #FFFCFA, #FFF3EA);
   color: #FD8B51;
+  background: linear-gradient(to right, #FFFCFA, #FFF3EA);
   border-right: 4px solid #FD8B51;
 }

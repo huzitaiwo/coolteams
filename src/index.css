@@ -24,7 +24,6 @@ button {
   background: #F7F6F4;
   border: none;
 }
-
 header,
 .sidebar {
   background: #fff;
@@ -40,5 +39,5 @@ header,
   margin: 10px 0;
 }
 .w-6 {
-  width: 25px;
+  width: 23px;
 }
