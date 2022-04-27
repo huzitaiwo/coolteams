@@ -30,4 +30,7 @@ form.search input {
 }
 .notification {
   margin: 0 20px;
+  padding: 8px 10px;
+  border-radius: 4px;
+  display: flex;
 }
