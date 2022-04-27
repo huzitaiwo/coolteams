@@ -4,6 +4,7 @@ import { BrowserRouter, Switch as Routes, Route } from 'react-router-dom'
 import './App.css'
 import Dashboard from './pages/Dashboard'
 import Projects from './pages/Projects'
+import Project from './pages/Project'
 import Task from './pages/Task'
 
 function App() {
@@ -19,6 +20,9 @@ function App() {
           </Route>
           <Route path='/task'>
             <Task />
+          </Route>
+          <Route path='/projects/:id'>
+            <Project />
           </Route>
         </Routes>
       </BrowserRouter>
