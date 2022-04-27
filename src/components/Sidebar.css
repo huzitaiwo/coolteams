@@ -1,0 +1,20 @@
+.sidebar {
+  min-height: 100%;
+}
+.logo {
+  margin-bottom: 30px;
+}
+.navigation-links li {
+  list-style: none;
+} 
+.navigation-links a {
+  text-decoration: none;
+  display: block;
+  color: #000;
+  padding: 20px 15px;
+  text-transform: uppercase;
+}
+.navigation-links a.active {
+  background: pink;
+  color: rgb(224, 42, 42);
+}
