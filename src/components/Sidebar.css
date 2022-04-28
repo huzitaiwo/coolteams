@@ -47,6 +47,6 @@
 }
 .navigation-links.dark a.active {
   color: #F7423D;
-  background: linear-gradient(to right, #3E3633, #5F6365);
+  background: linear-gradient(to right, #3E3633, #2B2F33);
   border-color: #F7423D;
 }
