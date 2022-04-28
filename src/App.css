@@ -7,3 +7,14 @@
   gap: 30px;
   background: #F7F6F4;
 }
+button {
+  cursor: pointer;
+  background: #F7F6F4;
+  border: none;
+}
+header,
+.sidebar {
+  background: #fff;
+  padding: 15px;
+  border-radius: 0.5rem;
+}
