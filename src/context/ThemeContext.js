@@ -7,7 +7,7 @@ export function ThemeProvider({ children }) {
   // cusom logic
 
   return (
-    <ThemeContext.Provider value={{ color: 'teal'}}>
+    <ThemeContext.Provider value={{ color: 'black' }}>
       {children}
     </ThemeContext.Provider>
   )
