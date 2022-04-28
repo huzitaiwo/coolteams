@@ -1,8 +1,28 @@
 .auth-form {
-  max-width: 360px;
+  max-width: 400px;
   margin: 60px auto;
   padding: 40px;
-  border: 1px solid #ddd;
+  border: 1px solid #E3E4E4;
   box-shadow: 3px 3px 5px rgba(0,0,0,0.05);
   background: #fff;
+}
+.auth-form label {
+  display: block;
+  margin: 24px auto;
+}
+.auth-form label span {
+  display: block;
+  margin-bottom: 6px;
+}
+.auth-form input, textarea {
+  padding: 8px 6px;
+  font-size: 1em;
+  color: #777;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+.auth-form textarea {
+  min-height: 160px;
 }

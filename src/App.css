@@ -1,4 +1,5 @@
 .App {
+  color: #4B5563;
   min-height: 100vh;
   width: 100%;
   max-width: 2200px;
@@ -7,7 +8,6 @@
   display: grid;
   grid-template-columns: 220px 1fr;
   gap: 30px;
-  color: #4B5563;
 }
 .App.dark {
   background: #212529;
@@ -36,34 +36,14 @@ header.dark,
 }
 .btn {
   background: #fff;
-  padding: 8px 12px;
+  padding: 5px 10px;
   border-radius: 4px;
   color: #FD8B51;
   cursor: pointer;
   font-size: 1em;
-  border: 1px solid var(--primary-color);
+  border: 1px solid #FD8B51;
 }
 .btn:hover {
   color: #fff;
   background-color: #FD8B51;
-}
-label {
-  display: block;
-  margin: 24px auto;
-}
-label span {
-  display: block;
-  margin-bottom: 6px;
-}
-input, textarea {
-  padding: 8px 6px;
-  font-size: 1em;
-  color: #777;
-  width: 100%;
-  box-sizing: border-box;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-}
-textarea {
-  min-height: 160px;
 }
