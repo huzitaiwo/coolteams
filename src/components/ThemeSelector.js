@@ -13,8 +13,8 @@ export default function ThemeSelector() {
   return (
     <div className="theme-selector">
       <button onClick={toggleMode} className="mode-toggler">
-        {mode === 'dark' && <img src={darkIcon} alt="mode toggler" />}
-        {mode === 'light' && <img src={lightIcon} alt="mode toggler" />}
+        {mode === 'light' && <img src={darkIcon} alt="mode toggler" />}
+        {mode === 'dark' && <img src={lightIcon} alt="mode toggler" />}
       </button>
     </div>
   )
