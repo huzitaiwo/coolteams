@@ -9,12 +9,18 @@
 .logo svg {
   width: 80px;
 }
+.logo.dark svg {
+  stroke: #E3E4E4;
+}
 .navigation-links li {
   list-style: none;
   margin-bottom: 20px;
 } 
 .navigation-links svg {
   margin-right: 10px;
+}
+.navigation-links.dark svg {
+  stroke: #E3E4E4;
 }
 .navigation-links a.active svg {
   stroke: #FD8B51;
@@ -27,6 +33,9 @@
   text-transform: uppercase;
   display: flex;
   align-items: center;
+}
+.navigation-links.dark a {
+  color: #E3E4E4;
 }
 .navigation-links a.active {
   color: #FD8B51;
