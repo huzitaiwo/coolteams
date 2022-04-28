@@ -12,12 +12,19 @@ form.search {
   padding: 10px;
   border-radius: 5px;
 }
+form.search.dark {
+  background: #5F6365;
+}
 form.search input {
   width: 100%;
   display: block;
   outline: none;
   border: none;
   background: none;
+}
+form.search.dark input,
+form.search.dark input::placeholder {
+  color: #E3E4E4;
 }
 .avatar {
   width: 35px;
@@ -34,4 +41,7 @@ form.search input {
   border-radius: 4px;
   display: flex;
   background: none;
+}
+.notification.dark svg {
+  stroke: #5F6365;
 }
