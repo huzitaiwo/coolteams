@@ -5,7 +5,11 @@
   display: grid;
   grid-template-columns: 220px 1fr;
   gap: 30px;
-  background: #F7F6F4;
+}
+.App.dark {
+  background: #212529;
+  color: #DBDCDC;
+
 }
 button {
   cursor: pointer;

@@ -1,4 +1,5 @@
 import { BrowserRouter, Switch as Routes, Route } from 'react-router-dom'
+import { useTheme } from './hooks/useTheme'
 
 // styles 
 import './App.css'
@@ -13,8 +14,10 @@ import Sidebar from './components/Sidebar'
 import ThemeSelector from './components/ThemeSelector'
 
 function App() {
+  const { mode } = useTheme()
+
   return (
-    <div className="App">
+    <div className={`App ${mode}`}>
       <BrowserRouter>
       <Sidebar />
       <div className="content">
