@@ -19,6 +19,7 @@ export default function Signup() {
       <label>
         <span>email:</span>
         <input
+          className={mode}
           required
           type="email" 
           onChange={e => setEmail(e.target.value)}
@@ -29,6 +30,7 @@ export default function Signup() {
       <label>
         <span>password:</span>
         <input
+          className={mode}
           required
           type="password" 
           onChange={e => setPassword(e.target.value)}
@@ -39,6 +41,7 @@ export default function Signup() {
       <label>
         <span>display name:</span>
         <input
+          className={mode}
           required
           type="text" 
           onChange={e => setDisplayName(e.target.value)}
@@ -49,6 +52,7 @@ export default function Signup() {
       <label>
         <span>profile thumbnail:</span>
         <input
+          className={mode}
           required
           type="file"
         />
