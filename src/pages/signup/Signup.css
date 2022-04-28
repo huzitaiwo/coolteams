@@ -6,6 +6,12 @@
   box-shadow: 3px 3px 5px rgba(0,0,0,0.05);
   background: #fff;
 }
+.auth-form.dark {
+  border: none;
+  box-shadow: 3px 3px 5px rgba(0,0,0,0.05);
+  background: #2B2F33;
+  color: #E3E4E4;
+}
 .auth-form label {
   display: block;
   margin: 24px auto;
@@ -18,10 +24,16 @@
   padding: 8px 6px;
   font-size: 1em;
   color: #4B5563;
+  border: 1px solid #E3E4E4;
   width: 100%;
   box-sizing: border-box;
-  border: 1px solid #E3E4E4;
   border-radius: 4px;
+  
+}
+.auth-form input.dark, .auth-form textarea.dark {
+  background: #5F6365;
+  color: #E3E4E4;
+  border: 1px solid #E3E4E4;
   
 }
 .auth-form input:focus, .auth-form textarea:focus {
