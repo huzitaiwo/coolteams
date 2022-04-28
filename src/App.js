@@ -8,6 +8,8 @@ import './App.css'
 import Dashboard from './pages/dashboard/Dashboard'
 import Projects from './pages/projects/Projects'
 import Project from './pages/project/Project'
+import Signup from './pages/signup/Signup'
+import Login from './pages/login/Login'
 import Task from './pages/task/Task'
 import Navbar from './components/Navbar'
 import Sidebar from './components/Sidebar'
@@ -27,6 +29,12 @@ function App() {
           <Routes>
             <Route exact path='/'>
               <Dashboard />
+            </Route>
+            <Route path='/signup'>
+              <Signup />
+            </Route>
+            <Route path='/login'>
+              <Login />
             </Route>
             <Route path='/projects'>
               <Projects />
