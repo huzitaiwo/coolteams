@@ -8,7 +8,7 @@
 }
 .App.dark {
   background: #212529;
-  color: #DBDCDC;
+  color: #E3E4E4;
 
 }
 button {
@@ -21,4 +21,9 @@ header,
   background: #fff;
   padding: 15px;
   border-radius: 0.5rem;
+}
+header.dark,
+.sidebar.dark {
+  background: #2B2F33;
+  color: #E3E4E4;
 }
