@@ -1,4 +1,5 @@
-import { ThemeSelector } from '../../components/ThemeSelector'
+// components
+import ThemeSelector from '../../components/ThemeSelector'
 
 // styles
 import './Settings.css'
