@@ -42,7 +42,20 @@ header.dark,
   font-size: 1em;
   border: 2px solid #FD7B38;
 }
+.btn.dark {
+  background: #2B2F33;
+  padding: 5px 10px;
+  border-radius: 4px;
+  color: #FD413C;
+  cursor: pointer;
+  font-size: 1em;
+  border: 2px solid #FD413C;
+}
 .btn:hover {
   color: #fff;
   background-color: #FD7B38;
+}
+.btn.dark:hover {
+  color: #fff;
+  background-color: #FD413C;
 }
