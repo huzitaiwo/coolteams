@@ -1,4 +1,5 @@
-import { BrowserRouter, Switch as Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Switch as Routes, Route, Redirect } from 'react-router-dom'
+import { useAuthContext } from './hooks/useAuthContext'
 import { useTheme } from './hooks/useTheme'
 
 // styles 
@@ -16,41 +17,44 @@ import Navbar from './components/Navbar'
 import Sidebar from './components/Sidebar'
 
 function App() {
+  const { user, authIsReady } = useAuthContext()
   const { mode } = useTheme()
 
   return (
     <div className={`App ${mode}`}>
-      <BrowserRouter>
-      <Sidebar />
-      <div className="content">
-        <Navbar />
-        <main>
-          <Routes>
-            <Route exact path='/'>
-              <Dashboard />
-            </Route>
-            <Route path='/signup'>
-              <Signup />
-            </Route>
-            <Route path='/login'>
-              <Login />
-            </Route>
-            <Route path='/projects'>
-              <Projects />
-            </Route>
-            <Route path='/projects/:id'>
-              <Project />
-            </Route>
-            <Route path='/task'>
-              <Task />
-            </Route>
-            <Route path='/settings'>
-              <Settings />
-            </Route>
-          </Routes>
-        </main>
-      </div>
-      </BrowserRouter>
+      {authIsReady && (
+        <BrowserRouter>
+        <Sidebar />
+        <div className="content">
+          <Navbar />
+          <main>
+            <Routes>
+              <Route exact path='/'>
+                <Dashboard />
+              </Route>
+              <Route path='/signup'>
+                <Signup />
+              </Route>
+              <Route path='/login'>
+                <Login />
+              </Route>
+              <Route path='/projects'>
+                <Projects />
+              </Route>
+              <Route path='/projects/:id'>
+                <Project />
+              </Route>
+              <Route path='/task'>
+                <Task />
+              </Route>
+              <Route path='/settings'>
+                <Settings />
+              </Route>
+            </Routes>
+          </main>
+        </div>
+        </BrowserRouter>
+      )}
     </div>
   );
 }
