@@ -1,5 +1,6 @@
 .App {
   color: #4B5563;
+  background: #F7F6F4;
   min-height: 100vh;
   width: 100%;
   max-width: 2200px;
@@ -15,9 +16,7 @@
 
 }
 
-
 /* __________global styles__________ */
-
 button {
   cursor: pointer;
   background: none;
@@ -38,12 +37,12 @@ header.dark,
   background: #fff;
   padding: 5px 10px;
   border-radius: 4px;
-  color: #FD8B51;
+  color: #FD7B38;
   cursor: pointer;
   font-size: 1em;
-  border: 1px solid #FD8B51;
+  border: 2px solid #FD7B38;
 }
 .btn:hover {
   color: #fff;
-  background-color: #FD8B51;
+  background-color: #FD7B38;
 }
