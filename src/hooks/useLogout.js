@@ -13,6 +13,9 @@ export const useLogout = () => {
 
     // sign user out
     try {
+      //update online status
+      const { uid } = user
+      await firebaseFirestore.collection('users').doc(uid).update({ online: false })
 
       await firebaseAuth.signOut()
 
@@ -24,6 +27,7 @@ export const useLogout = () => {
       setError(null)
     }
     
+    //catch error if any
     catch(err) {
       setError(err.message)
       setIsPending(false)
