@@ -1,16 +1,19 @@
 import { useState } from 'react'
 import { useTheme } from '../../hooks/useTheme'
+import { useSignup } from '../../hooks/useSignup'
 
 //syles
 import './Signup.css'
 
 export default function Signup() {
   const { mode } = useTheme()
+  const { signup, isPending, error } = useSignup()
 
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [displayName, setDisplayName] = useState('')
   const [thumbnail, setThumbnail] = useState(null)
+  const [thumbnailError, setThumbnailError] = useState(null)
 
   const handleFileChange = e => {
     setThumbnail(null)
@@ -84,9 +87,12 @@ export default function Signup() {
           type="file"
           onChange={handleFileChange}
         />
+        {thumbnailError && <div className='error'>{thumbnailError}</div>}
       </label>
 
-      <button className='btn'>Sign up</button>
+      {!isPending && <button className='btn'>Sign up</button>}
+      {isPending && <button disabled className='btn'>Signing up...</button>}
+      {error && <div className='error'>{error}</div>}
     </form>
   )
 }
