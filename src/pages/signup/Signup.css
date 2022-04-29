@@ -33,7 +33,7 @@
 .auth-form input.dark, .auth-form textarea.dark {
   background: #5F6365;
   color: #E3E4E4;
-  border: 1px solid #E3E4E4;
+  border: none;
   
 }
 .auth-form input:focus, .auth-form textarea:focus {

@@ -43,7 +43,7 @@ export default function Signup() {
   }
 
   return (
-    <form onClick={handleSignup} className={`auth-form ${mode}`}>
+    <form onSubmit={handleSignup} className={`auth-form ${mode}`}>
       <h2>Sign up</h2>
 
       <label>
