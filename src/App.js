@@ -30,25 +30,30 @@ function App() {
           <main>
             <Routes>
               <Route exact path='/'>
-                <Dashboard />
+                {!user && <Redirect to='/login' />}
+                {user && <Dashboard />}
+              </Route>
+              <Route path='/projects'>
+                {!user && <Redirect to='/login' />}
+                {user && <Projects />}
+              </Route>
+              <Route path='/projects/:id'>
+                {!user && <Redirect to='/login' />}
+                {user && <Project />}
+              </Route>
+              <Route path='/task'>
+                {!user && <Redirect to='/login' />}
+                {user && <Task />}
+              </Route>
+              <Route path='/settings'>
+                {!user && <Redirect to='/login' />}
+                {user && <Settings />}
               </Route>
               <Route path='/signup'>
                 <Signup />
               </Route>
               <Route path='/login'>
                 <Login />
-              </Route>
-              <Route path='/projects'>
-                <Projects />
-              </Route>
-              <Route path='/projects/:id'>
-                <Project />
-              </Route>
-              <Route path='/task'>
-                <Task />
-              </Route>
-              <Route path='/settings'>
-                <Settings />
               </Route>
             </Routes>
           </main>

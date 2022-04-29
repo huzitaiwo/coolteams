@@ -19,7 +19,7 @@ export default function Login() {
 
   return (
     <form onSubmit={handleLogin} className={`auth-form ${mode}`}>
-      <h2>Sign up</h2>
+      <h2>Login</h2>
 
       <label>
         <span>email:</span>
