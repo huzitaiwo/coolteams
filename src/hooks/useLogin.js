@@ -20,8 +20,7 @@ export const useLogin = () => {
       }
 
       // update online status
-      const { uid } = user
-      await firebaseFirestore.collection('users').doc(uid).update({ online: true })
+      await firebaseFirestore.collection('users').doc(res.user.uid).update({ online: true })
 
       // dispatch login action
       dispatch({ type: 'LOGIN', payload: res.user })

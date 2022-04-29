@@ -1,10 +1,12 @@
 import { useState } from 'react'
+import { useTheme } from '../../hooks/useTheme'
 import { useLogin } from '../../hooks/useLogin'
 
 // styles
 import './Login.css'
 
 export default function Login() {
+  const { mode } = useTheme()
   const { login, isPending, error } = useLogin()
 
   const [email, setEmail] = useState('')
