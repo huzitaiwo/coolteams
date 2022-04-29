@@ -22,8 +22,8 @@ export default function Navbar() {
         <img src="./images/person1.png" alt="" />
       </div>
       
-      {!isPending && <button onClick={logout} className="btn">Logout</button>}
-      {isPending && <button onClick={logout} className="btn">Loging out...</button>}
+      {!isPending && <button onClick={logout} className={`btn ${mode}`}>Logout</button>}
+      {isPending && <button onClick={logout} className={`btn ${mode}`}>Loging out...</button>}
       {error && <div className='error'>{error}</div>}
     </header>
   )
