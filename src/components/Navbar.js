@@ -1,10 +1,12 @@
 import { useTheme } from '../hooks/useTheme'
+import { useLogout } from '../hooks/useLogout'
 
 // styles
 import './Navbar.css'
 
 export default function Navbar() {
   const { mode } = useTheme()
+  const { logout, isPending, error } = useLogout()
 
   return (
     <header className={mode}>
@@ -19,6 +21,10 @@ export default function Navbar() {
       <div className="avatar">
         <img src="./images/person1.png" alt="" />
       </div>
+      
+      {!isPending && <button onClick={logout} className="btn">Logout</button>}
+      {isPending && <button onClick={logout} className="btn">Loging out...</button>}
+      {error && <div className='error'>{error}</div>}
     </header>
   )
 }
