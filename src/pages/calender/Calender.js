@@ -1,5 +1,5 @@
 // styles
-import './Caldender.css'
+import './Calender.css'
 
 export default function Calender() {
   return (
