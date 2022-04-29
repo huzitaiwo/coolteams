@@ -12,8 +12,35 @@ export default function Signup() {
   const [displayName, setDisplayName] = useState('')
   const [thumbnail, setThumbnail] = useState(null)
 
+  const handleFileChange = e => {
+    setThumbnail(null)
+
+    let file = e.target.files[0]
+
+    if (!file) {
+      setThumbnailError('Please select an image file')
+      return
+    }
+    if (!file.type.includes('image')) {
+      setThumbnailError('Selected file must be an image')
+      return
+    }
+    if (file.size > 1000000) {
+      setThumbnailError('Image file size must be less than 1MB')
+      return 
+    }
+
+    setThumbnailError(null)
+    setThumbnail(file)
+  }
+
+  const handleSignup = e => {
+    e.preventDefault()
+    signup(email, password, displayName, thumbnail)
+  }
+
   return (
-    <form className={`auth-form ${mode}`}>
+    <form onClick={handleSignup} className={`auth-form ${mode}`}>
       <h2>Sign up</h2>
 
       <label>
@@ -55,6 +82,7 @@ export default function Signup() {
           className={mode}
           required
           type="file"
+          onChange={handleFileChange}
         />
       </label>
 
