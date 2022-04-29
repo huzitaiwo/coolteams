@@ -8,6 +8,7 @@ import './App.css'
 // pages && components
 import Dashboard from './pages/dashboard/Dashboard'
 import Settings from './pages/settings/Settings'
+import Calender from './pages/calender/Calender'
 import Projects from './pages/projects/Projects'
 import Project from './pages/project/Project'
 import Signup from './pages/signup/Signup'
@@ -44,6 +45,10 @@ function App() {
               <Route path='/task'>
                 {!user && <Redirect to='/login' />}
                 {user && <Task />}
+              </Route>
+              <Route>
+                {!user && <Redirect to='/login' />}
+                {user && <Calender />}
               </Route>
               <Route path='/settings'>
                 {!user && <Redirect to='/login' />}
