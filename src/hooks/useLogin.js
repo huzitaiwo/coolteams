@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import { firebaseAuth } from "../firebase/config"
+import { firebaseAuth, firebaseFirestore } from "../firebase/config"
 import { useAuthContext } from "./useAuthContext"
 
 export const useLogin = () => {
@@ -18,6 +18,10 @@ export const useLogin = () => {
       if(!res) {
         throw new Error('Could not complete login')
       }
+
+      // update online status
+      const { uid } = user
+      await firebaseFirestore.collection('users').doc(uid).update({ online: true })
 
       // dispatch login action
       dispatch({ type: 'LOGIN', payload: res.user })

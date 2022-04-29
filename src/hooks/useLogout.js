@@ -13,7 +13,7 @@ export const useLogout = () => {
 
     // sign user out
     try {
-      //update online status
+      // update online status
       const { uid } = user
       await firebaseFirestore.collection('users').doc(uid).update({ online: false })
 
