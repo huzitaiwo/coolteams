@@ -50,10 +50,12 @@ function App() {
                 {user && <Settings />}
               </Route>
               <Route path='/signup'>
-                <Signup />
+                {user && <Redirect to='/' />}
+                {!user && <Signup />}
               </Route>
               <Route path='/login'>
-                <Login />
+                {user && <Redirect to='/' />}
+                {!user && <Login />}
               </Route>
             </Routes>
           </main>
