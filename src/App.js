@@ -6,6 +6,7 @@ import './App.css'
 
 // pages && components
 import Dashboard from './pages/dashboard/Dashboard'
+import Settings from './pages/settings/Settings'
 import Projects from './pages/projects/Projects'
 import Project from './pages/project/Project'
 import Signup from './pages/signup/Signup'
@@ -13,7 +14,6 @@ import Login from './pages/login/Login'
 import Task from './pages/task/Task'
 import Navbar from './components/Navbar'
 import Sidebar from './components/Sidebar'
-import ThemeSelector from './components/ThemeSelector'
 
 function App() {
   const { mode } = useTheme()
@@ -24,7 +24,6 @@ function App() {
       <Sidebar />
       <div className="content">
         <Navbar />
-        <ThemeSelector />
         <main>
           <Routes>
             <Route exact path='/'>
@@ -39,11 +38,14 @@ function App() {
             <Route path='/projects'>
               <Projects />
             </Route>
+            <Route path='/projects/:id'>
+              <Project />
+            </Route>
             <Route path='/task'>
               <Task />
             </Route>
-            <Route path='/projects/:id'>
-              <Project />
+            <Route path='/settings'>
+              <Settings />
             </Route>
           </Routes>
         </main>
