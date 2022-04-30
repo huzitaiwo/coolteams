@@ -17,6 +17,11 @@
 }
 
 /* __________global styles__________ */
+.page-title {
+  font-size: 1.2rem;
+  color: #4B5563;
+  display: inline-block;
+}
 button {
   cursor: pointer;
   background: none;
