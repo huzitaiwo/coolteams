@@ -26,9 +26,9 @@ function App() {
     <div className={`App ${mode}`}>
       {authIsReady && (
         <BrowserRouter>
-          <Sidebar />
+          {user && <Sidebar />}
           <div className="content">
-            <Navbar />
+            {user && <Navbar />}
             <main>
               <Switch>
                 <Route exact path='/'>
