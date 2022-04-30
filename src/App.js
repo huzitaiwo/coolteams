@@ -1,4 +1,4 @@
-import { BrowserRouter, Switch as Routes, Route, Redirect } from 'react-router-dom'
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
 import { useAuthContext } from './hooks/useAuthContext'
 import { useTheme } from './hooks/useTheme'
 
@@ -23,12 +23,13 @@ function App() {
 
   return (
     <div className={`App ${mode}`}>
+      {authIsReady && (
         <BrowserRouter>
         <Sidebar />
         <div className="content">
           <Navbar />
           <main>
-            <Routes>
+            <Switch>
               <Route exact path='/'>
                 {!user && <Redirect to='/login' />}
                 {user && <Dashboard />}
@@ -63,12 +64,11 @@ function App() {
                 {!user && <Login />} */}
                 <Login />
               </Route>
-            </Routes>
+            </Switch>
           </main>
         </div>
         </BrowserRouter>
-      {/* {authIsReady && (
-      )} */}
+      )}
     </div>
   );
 }
