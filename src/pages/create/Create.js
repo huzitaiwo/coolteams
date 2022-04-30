@@ -1,3 +1,5 @@
+import { useState } from 'react'
+
 // styles
 import './Create.css'
 
@@ -13,6 +15,38 @@ export default function Create() {
   return (
     <div className='create-form'>
       <h2 className='page-title'>Create a new project</h2>
+
+      <label>
+        <span>Project name:</span>
+        <input
+          required
+          type="text"
+          onChange={e => setName(e.target.value)}
+          value={name}
+        />
+      </label>
+
+      <label>
+        <span>Project details:</span>
+        <textarea
+          required
+          type="text"
+          onChange={e => setDetails(e.target.value)}
+          value={details}
+        >
+        </textarea>
+      </label>
+
+      <label>
+        <span>Project name:</span>
+        <input
+          required
+          type="date"
+          onChange={e => setDueDate(e.target.value)}
+          value={dueDate}
+        />
+      </label>
+
     </div>
   )
 }
