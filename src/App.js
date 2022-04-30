@@ -23,11 +23,10 @@ function App() {
 
   return (
     <div className={`App ${mode}`}>
-      {authIsReady && (
         <BrowserRouter>
-        {user && <Sidebar />}
+        <Sidebar />
         <div className="content">
-          {user && <Navbar />}
+          <Navbar />
           <main>
             <Routes>
               <Route exact path='/'>
@@ -55,18 +54,21 @@ function App() {
                 {user && <Settings />}
               </Route>
               <Route path='/signup'>
-                {user && <Redirect to='/' />}
-                {!user && <Signup />}
+                {/* {user && <Redirect to='/' />}
+                {!user && <Signup />} */}
+                <Signup />
               </Route>
               <Route path='/login'>
-                {user && <Redirect to='/' />}
-                {!user && <Login />}
+                {/* {user && <Redirect to='/' />}
+                {!user && <Login />} */}
+                <Login />
               </Route>
             </Routes>
           </main>
         </div>
         </BrowserRouter>
-      )}
+      {/* {authIsReady && (
+      )} */}
     </div>
   );
 }

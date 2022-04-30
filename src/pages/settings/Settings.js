@@ -7,7 +7,9 @@ import './Settings.css'
 export default function Settings() {
   return (
     <div>
-      <ThemeSelector />
+      <div className="settings-header">
+        <ThemeSelector />
+      </div>
     </div>
   )
 }
