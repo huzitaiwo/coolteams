@@ -23,9 +23,9 @@ export default function Navbar() {
       </button>
       <Avatar src={user.photoURL}/>
       
-      {!isPending && <button onClick={logout} className={`btn ${mode}`}>Logout</button>}
+      {/* {!isPending && <button onClick={logout} className={`btn ${mode}`}>Logout</button>}
       {isPending && <button onClick={logout} className={`btn ${mode}`}>Loging out...</button>}
-      {error && <div className='error'>{error}</div>}
+      {error && <div className='error'>{error}</div>} */}
     </header>
   )
 }
