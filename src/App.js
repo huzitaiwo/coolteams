@@ -25,48 +25,46 @@ function App() {
     <div className={`App ${mode}`}>
       {authIsReady && (
         <BrowserRouter>
-        <Sidebar />
-        <div className="content">
-          <Navbar />
-          <main>
-            <Switch>
-              <Route exact path='/'>
-                {!user && <Redirect to='/login' />}
-                {user && <Dashboard />}
-              </Route>
-              <Route path='/projects'>
-                {!user && <Redirect to='/login' />}
-                {user && <Projects />}
-              </Route>
-              <Route path='/projects/:id'>
-                {!user && <Redirect to='/login' />}
-                {user && <Project />}
-              </Route>
-              <Route path='/task'>
-                {!user && <Redirect to='/login' />}
-                {user && <Task />}
-              </Route>
-              <Route>
-                {!user && <Redirect to='/login' />}
-                {user && <Calender />}
-              </Route>
-              <Route path='/settings'>
-                {!user && <Redirect to='/login' />}
-                {user && <Settings />}
-              </Route>
-              <Route path='/signup'>
-                {/* {user && <Redirect to='/' />}
-                {!user && <Signup />} */}
-                <Signup />
-              </Route>
-              <Route path='/login'>
-                {/* {user && <Redirect to='/' />}
-                {!user && <Login />} */}
-                <Login />
-              </Route>
-            </Switch>
-          </main>
-        </div>
+          <Sidebar />
+          <div className="content">
+            <Navbar />
+            <main>
+              <Switch>
+                <Route exact path='/'>
+                  {!user && <Redirect to='/login' />}
+                  {user && <Dashboard />}
+                </Route>
+                <Route path='/projects'>
+                  {!user && <Redirect to='/login' />}
+                  {user && <Projects />}
+                </Route>
+                <Route path='/projects/:id'>
+                  {!user && <Redirect to='/login' />}
+                  {user && <Project />}
+                </Route>
+                <Route path='/task'>
+                  {!user && <Redirect to='/login' />}
+                  {user && <Task />}
+                </Route>
+                <Route path='/calender'>
+                  {!user && <Redirect to='/login' />}
+                  {user && <Calender />}
+                </Route>
+                <Route path='/settings'>
+                  {!user && <Redirect to='/login' />}
+                  {user && <Settings />}
+                </Route>
+                <Route path='/signup'>
+                  {user && <Redirect to='/' />}
+                  {!user && <Signup />}
+                </Route>
+                <Route path='/login'>
+                  {user && <Redirect to='/' />}
+                  {!user && <Login />}
+                </Route>
+              </Switch>
+            </main>
+          </div>
         </BrowserRouter>
       )}
     </div>
