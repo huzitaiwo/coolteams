@@ -11,6 +11,7 @@ import Settings from './pages/settings/Settings'
 import Calender from './pages/calender/Calender'
 import Projects from './pages/projects/Projects'
 import Project from './pages/project/Project'
+import Create from './pages/create/Create'
 import Signup from './pages/signup/Signup'
 import Login from './pages/login/Login'
 import Task from './pages/task/Task'
@@ -49,6 +50,10 @@ function App() {
                 <Route path='/calender'>
                   {!user && <Redirect to='/login' />}
                   {user && <Calender />}
+                </Route>
+                <Route path='/create'>
+                  {!user && <Redirect to='/login' />}
+                  {user && <Create />}
                 </Route>
                 <Route path='/settings'>
                   {!user && <Redirect to='/login' />}
