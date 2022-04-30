@@ -12,6 +12,11 @@ export default function Create() {
   const [assignedUsers, setAssignedUsers] = useState([])
   const [formError, setFormError] = useState(null)
 
+  const handleSubmit = e => {
+    e.preventDefault()
+    console.log(name, details, dueDate)
+  }
+
   return (
     <div className='create-form'>
       <h2 className='page-title'>Create a new project</h2>

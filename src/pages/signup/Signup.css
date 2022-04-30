@@ -13,15 +13,20 @@
   background: #2B2F33;
   color: #E3E4E4;
 }
-.auth-form label {
+.auth-form label,
+.create-form label {
   display: block;
   margin: 24px auto;
 }
-.auth-form label span {
+.auth-form label span,
+.create-form label span {
   display: block;
   margin-bottom: 6px;
 }
-.auth-form input, .auth-form textarea {
+.auth-form input,
+.auth-form textarea,
+.create-form input,
+.create-form textarea {
   padding: 8px 6px;
   font-size: 1em;
   color: #4B5563;
@@ -31,12 +36,18 @@
   border-radius: 4px;
   
 }
-.auth-form input.dark, .auth-form textarea.dark {
+.auth-form input.dark,
+.auth-form textarea.dark,
+.create-form input.dark,
+.create-form textarea.dark {
   background: #5F6365;
   color: #E3E4E4;
   border: 1px solid transparent;  
 }
-.auth-form input:focus, .auth-form textarea:focus {
+.auth-form input:focus,
+.auth-form textarea:focus
+.create-form input:focus,
+.create-form textarea:focus {
   outline: 1px solid #E3E4E4;
 }
 .auth-form textarea {
