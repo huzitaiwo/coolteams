@@ -62,7 +62,10 @@ export default function Create() {
 
         <label>
           <span>Project Category:</span>
-          {/* category select here */}
+          <Select
+            onChange={option => setCategory(option)}
+            option={categories}
+          />
         </label>
 
         <label>
