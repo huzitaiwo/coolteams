@@ -18,8 +18,10 @@
   display: flex;
   justify-content: space-between;
 }
-.card .users {
+.card .users,
+.card .list {
   display: flex;
+  align-items: center;
 }
 .card .avatar {
  margin-left: -7px;
