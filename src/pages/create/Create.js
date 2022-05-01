@@ -3,6 +3,14 @@ import { useState } from 'react'
 // styles
 import './Create.css'
 
+// select catogory
+const categories = [
+  { value: 'development', label: 'Development'},
+  { value: 'design', label: 'Design'},
+  { value: 'sales', label: 'Sales'},
+  { value: 'marketing', label: 'Marketing'}
+]
+
 export default function Create() {
   // form field values
   const [name, setName] = useState('')
