@@ -8,7 +8,7 @@
 }
 .project-list .project-image {
   width: 100%;
-  height: 150px;
+  height: 135px;
   object-fit: cover;
   border-radius: 10px;
 }
