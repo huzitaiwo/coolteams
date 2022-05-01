@@ -5,7 +5,7 @@ import './Settings.css'
 import ThemeSelector from '../../components/ThemeSelector'
 
 export default function Settings() {
-  const { logout, isPending } = useLogout()
+  const { logout, isPending, error } = useLogout()
 
   return (
     <div>
@@ -14,6 +14,7 @@ export default function Settings() {
         {!isPending && <button onClick={logout} className="btn">Logout</button>}
         {isPending && <button className='btn'>Logging out...</button>}
       </div>
+      {error && <div>{error}</div>}
     </div>
   )
 }
