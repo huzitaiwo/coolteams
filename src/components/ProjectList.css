@@ -6,16 +6,12 @@
 .project-list ul {
   list-style: none;
 }
-.project-list .avatar {
-  width: 30px;
-  height: 30px;
-}
 .card {
   display: block;
   text-decoration: none;
   color: #4B5563;
   background: #fff;
-  padding: 10px;
+  padding: 20px;
   border-radius: 1rem;
 }
 .card .assigned-to {
