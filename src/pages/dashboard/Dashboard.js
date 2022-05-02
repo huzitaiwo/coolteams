@@ -18,7 +18,6 @@ export default function Dashboard() {
 
   return (
     <div>
-      <h2 className={`page-title ${mode}`}>Dashboard</h2>
       {documents && <ProjectList projects={documents} />}
     </div>
   )
