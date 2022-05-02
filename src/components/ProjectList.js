@@ -35,7 +35,7 @@ export default function ProjectList({ projects }) {
                 ))}
               </ul>
             </div>
-            <p className='success'>Due by: {project.dueDate.toDate().toDateString()}</p>
+            <p className='msg warning'>Due by: {project.dueDate.toDate().toDateString()}</p>
           </div>
         </Link>
       ))}
