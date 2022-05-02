@@ -18,13 +18,20 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-.error {
+.error,
+.success {
   color: red;
   background: pink;
   border: 1px solid red;
   border-radius: 5px;
   padding: 10px;
   margin: 10px 0;
+}
+.success {
+  color: #60B158;
+  background: #E7F4E6;
+  border: none;
+  display: inline-block;
 }
 .w-6 {
   width: 23px;
