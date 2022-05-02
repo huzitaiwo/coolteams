@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Select from 'react-select'
+import { useTheme } from '../../hooks/useTheme'
 
 // styles
 import './Create.css'
@@ -13,6 +14,8 @@ const categories = [
 ]
 
 export default function Create() {
+  const { mode } = useTheme()
+
   // form field values
   const [name, setName] = useState('')
   const [details, setDetails] = useState('')
@@ -28,11 +31,12 @@ export default function Create() {
 
   return (
     <div className='create-form'>
-      <h2 className='page-title'>Create a new project</h2>
+      <h2 className={`page-title ${mode}`}>Create a new project</h2>
       <form onSubmit={handleSubmit}>
         <label>
           <span>Project name:</span>
           <input
+            className={mode}
             required
             type="text"
             onChange={e => setName(e.target.value)}
@@ -43,6 +47,7 @@ export default function Create() {
         <label>
           <span>Project details:</span>
           <textarea
+            className={mode}
             required
             type="text"
             onChange={e => setDetails(e.target.value)}
@@ -54,6 +59,7 @@ export default function Create() {
         <label>
           <span>Project name:</span>
           <input
+            className={mode}
             required
             type="date"
             onChange={e => setDueDate(e.target.value)}
@@ -74,7 +80,7 @@ export default function Create() {
           {/* category select here */}
         </label>
 
-        <button className='btn'>Add</button>
+        <button className={`btn ${mode}`}>Add</button>
       </form>
     </div>
   )
