@@ -19,7 +19,8 @@ code {
     monospace;
 }
 .error,
-.success {
+.success,
+.info {
   color: red;
   background: pink;
   border: 1px solid red;
