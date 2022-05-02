@@ -1,6 +1,5 @@
 import { useTheme } from '../hooks/useTheme'
 import { useAuthContext } from '../hooks/useAuthContext'
-import { useLogout } from '../hooks/useLogout'
 
 // styles and components
 import './Navbar.css'
