@@ -16,6 +16,7 @@ export default function Projects() {
   return (
     <div>
       {documents && <ProjectList projects={documents} />}
+      projects
     </div>
   )
 }
