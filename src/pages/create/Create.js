@@ -104,13 +104,12 @@ export default function Create() {
       comments: [],
       createdBy,
       assignedUsersList,
-      thumbnail
     }
 
-    await addDocument(project)
+    await addDocument(project, thumbnail)
 
     if (!response.error) {
-      history.push('/')
+      history.push('/projects')
     }
   }
 
