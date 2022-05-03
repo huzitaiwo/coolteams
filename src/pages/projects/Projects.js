@@ -1,3 +1,6 @@
+import ProjectList from '../../components/ProjectList'
+import { useCollection } from '../../hooks/useCollection'
+import { useTheme } from '../../hooks/useTheme'
 
 export default function Projects() {
   const { mode } = useTheme()
