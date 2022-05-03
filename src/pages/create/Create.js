@@ -117,6 +117,7 @@ export default function Create() {
     <div className='create-form'>
       <h2 className={`page-title ${mode}`}>Create a new project</h2>
       <form onSubmit={handleSubmit}>
+
         <label>
           <span>Project name:</span>
           <input
@@ -127,6 +128,17 @@ export default function Create() {
             value={name}
           />
         </label>
+
+        <label>
+        <span>project thumbnail:</span>
+        <input
+          className={mode}
+          required
+          type="file"
+          onChange={handleFileChange}
+        />
+        {thumbnailError && <div className='error'>{thumbnailError}</div>}
+      </label>
 
         <label>
           <span>Project details:</span>
@@ -141,7 +153,7 @@ export default function Create() {
         </label>
 
         <label>
-          <span>Project name:</span>
+          <span>Due Date:</span>
           <input
             className={mode}
             required
