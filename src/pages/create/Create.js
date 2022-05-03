@@ -45,6 +45,28 @@ export default function Create() {
 
   }, [documents])
 
+  const handleFileChange = e => {
+    setThumbnail(null)
+
+    let file = e.target.files[0]
+
+    if (!file) {
+      setThumbnailError('Please select an image file')
+      return
+    }
+    if (!file.type.includes('image')) {
+      setThumbnailError('Selected file must be an image')
+      return
+    }
+    if (file.size > 1000000) {
+      setThumbnailError('Image file size must be less than 1MB')
+      return 
+    }
+
+    setThumbnailError(null)
+    setThumbnail(file)
+  }
+
   const handleSubmit = async e => {
     e.preventDefault()
 
