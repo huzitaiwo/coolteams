@@ -28,6 +28,7 @@ export default function Create() {
 
   // form field values
   const [name, setName] = useState('')
+  const [thumbnail, setThumbnail] = useState(null)
   const [details, setDetails] = useState('')
   const [dueDate, setDueDate] = useState('')
   const [category, setCategory] = useState('')
