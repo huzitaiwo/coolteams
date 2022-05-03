@@ -51,7 +51,7 @@ export const useFirestore = collection => {
       const photo = await firebaseStorage.ref(uploadPath).put(thumbnail)
       const photoURL = await photo.ref.getDownloadURL()
 
-      const addedDocument = await ref.add({ ...doc, createdAt })
+      const addedDocument = await ref.add({ ...doc, createdAt, photoURL })
       dispatchIfNotUnMounted({ type: 'ADD_DOCUMENT', payload: addedDocument })
     }
     catch (err) {

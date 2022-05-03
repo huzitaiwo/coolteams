@@ -103,7 +103,8 @@ export default function Create() {
       dueDate: timestamp.fromDate(new Date(dueDate)),
       comments: [],
       createdBy,
-      assignedUsersList
+      assignedUsersList,
+      thumbnail
     }
 
     await addDocument(project)
