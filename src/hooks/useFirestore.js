@@ -1,5 +1,5 @@
 import { useReducer, useEffect, useState } from 'react'
-import { firebaseFirestore, timestamp } from '../firebase/config'
+import { firebaseFirestore, firebaseStorage, timestamp } from '../firebase/config'
 
 let initialState = {
   document: null,
@@ -40,11 +40,17 @@ export const useFirestore = collection => {
   }
 
   // add document
-  const addDocument = async (doc) => {
+  const addDocument = async (doc, thumbnail) => {
     dispatch({ type: 'IS_LOADING' })
 
     try {
       const createdAt = timestamp.fromDate(new Date())
+
+      // upload project thumbnail
+      const uploadPath = `thumbnails/projects/${thumbnail.name}`
+      const photo = await firebaseStorage.ref(uploadPath).put(thumbnail)
+      const photoURL = await photo.ref.getDownloadURL()
+
       const addedDocument = await ref.add({ ...doc, createdAt })
       dispatchIfNotUnMounted({ type: 'ADD_DOCUMENT', payload: addedDocument })
     }
