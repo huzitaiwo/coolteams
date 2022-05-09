@@ -16,7 +16,7 @@ export default function ProjectList({ projects }) {
     <div className='project-list'>
       {projects.map(project => (
         <Link className='card' to={ `/projects/${project.id}`} key={project.id}>
-          <img className='project-image' src={placeholderImage} alt="placeholder" />
+          <img className='project-image' src={project.photoURL} alt="placeholder" />
           <h4>{project.name}</h4>
           <p>These project will need a brand new identity.</p>
           <div className='assigned-to'>
