@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useTheme } from '../hooks/useTheme'
-import placeholderImage from '../assets/image/booking.png'
+// import placeholderImage from '../assets/image/booking.png'
 
 // styles and components
 import './ProjectList.css'

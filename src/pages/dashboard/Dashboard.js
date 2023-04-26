@@ -1,10 +1,10 @@
-import { useTheme } from '../../hooks/useTheme'
+// import { useTheme } from '../../hooks/useTheme'
 
 // styles
 import './Dashboard.css'
 
 export default function Dashboard() {
-  const { mode } = useTheme()
+  // const { mode } = useTheme()
 
   return (
     <div>

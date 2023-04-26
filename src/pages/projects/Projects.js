@@ -1,9 +1,9 @@
 import ProjectList from '../../components/ProjectList'
 import { useCollection } from '../../hooks/useCollection'
-import { useTheme } from '../../hooks/useTheme'
+// import { useTheme } from '../../hooks/useTheme'
 
 export default function Projects() {
-  const { mode } = useTheme()
+  // const { mode } = useTheme()
   const { documents, isPending, error } = useCollection('projects')
 
   if (error) {
