@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 
 // components & styles
-import ProjectList from '../../components/ProjectsList'
+import ProjectsList from '../../components/ProjectsList'
 import Header from '../../components/Header'
 import './Projects.css'
 
@@ -37,7 +37,7 @@ export default function Projects() {
           </div>
           {documents && documents.map(project => (
             <Link className={`project__card ${mode}`} to={`/project/${project.id}`} key={project.id}>
-              <ProjectList project={project} />
+              <ProjectsList project={project} />
             </Link>
           ))}
         </div>
@@ -50,7 +50,7 @@ export default function Projects() {
           </div>
           {documents && documents.map(project => (
             <Link className={`project__card ${mode}`} to={`/project/${project.id}`} key={project.id}>
-              <ProjectList project={project} />
+              <ProjectsList project={project} />
             </Link>
           ))}
         </div>
@@ -63,7 +63,7 @@ export default function Projects() {
           </div>
           {documents && documents.map(project => (
             <Link className={`project__card ${mode}`} to={`/project/${project.id}`} key={project.id}>
-              <ProjectList project={project} />
+              <ProjectsList project={project} />
             </Link>
           ))}
         </div>

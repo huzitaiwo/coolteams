@@ -9,9 +9,10 @@
 }
 .logo svg {
   width: 80px;
+  stroke: #FD8B51;
 }
 .logo.dark svg {
-  stroke: #E3E4E4;
+  stroke: #F7423D;
 }
 .navigation-links li {
   list-style: none;
