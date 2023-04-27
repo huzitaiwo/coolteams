@@ -6,15 +6,12 @@
   max-width: 2200px;
   margin: 0 auto;
   padding: 20px;
-  /* display: grid;
-  grid-template-columns: 220px 1fr; */
   gap: 30px;
   display: flex;
 }
 .App.dark {
   background: #212529;
   color: #E3E4E4;
-
 }
 .content {
   width: 100%;

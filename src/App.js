@@ -13,10 +13,10 @@ import Projects from './pages/projects/Projects'
 import Project from './pages/project/Project'
 import Create from './pages/create/Create'
 import Signup from './pages/signup/Signup'
+import Sidebar from './components/Sidebar'
+import Navbar from './components/Navbar'
 import Login from './pages/login/Login'
 import Task from './pages/task/Task'
-import Navbar from './components/Navbar'
-import Sidebar from './components/Sidebar'
 
 function App() {
   const { user, authIsReady } = useAuthContext()
@@ -39,7 +39,7 @@ function App() {
                   {!user && <Redirect to='/login' />}
                   {user && <Projects />}
                 </Route>
-                <Route path='/projects/:id'>
+                <Route path='/project/:id'>
                   {!user && <Redirect to='/login' />}
                   {user && <Project />}
                 </Route>

@@ -23,7 +23,6 @@ export default function Navbar() {
       <Link to='/settings'>
         <Avatar src={user.photoURL}/>
       </Link>
-
     </header>
   )
 }

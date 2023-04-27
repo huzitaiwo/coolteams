@@ -1,0 +1,13 @@
+.project__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 20px;
+}
+.card {
+  display: block;
+  text-decoration: none;
+  color: #25283B;
+  background: #fff;
+  border-radius: 1rem;
+  border: 1px solid #fff;
+}

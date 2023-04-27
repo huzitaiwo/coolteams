@@ -1,0 +1,31 @@
+.layout {
+  height: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.layout button {
+  border: 1px solid #5F6365;
+  border-radius: 8px;
+  padding: 5px 7px 3px 7px;
+}
+.layout .list,
+.layout .grid {
+  background: #fff;
+  border-color: #fff;
+}
+.layout .grid.active {
+  background: #FFF3ED;
+  border-color: #FD7B38;
+}
+.layout .grid svg {
+    stroke: #FD7B38;
+}
+.layout .add {
+    background: #FD7B38;
+    border-color: #FD7B38;
+}
+.layout .add svg {
+  color: #fff;
+}
