@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom'
 
 // components & hooks
 import { useDocument } from '../../hooks/useDocument'
-import ProjectList from '../../components/ProjectList'
+import ProjectList from '../../components/ProjectsList'
 
 export default function Project() {
   const { id } = useParams()

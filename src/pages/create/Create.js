@@ -1,21 +1,28 @@
+// react packages
 import { useEffect, useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import Select from 'react-select'
+
+// pages, components, hooks, context
 import { useCollection } from '../../hooks/useCollection'
+import { useTheme } from '../../hooks/useTheme'
+
+// firebase function
 import { useFirestore } from '../../hooks/useFirestore'
 import { useAuthContext } from '../../hooks/useAuthContext'
 import { timestamp } from '../../firebase/config'
-import { useTheme } from '../../hooks/useTheme'
 
 // styles
 import './Create.css'
 
-// select catogory
 const categories = [
-  { value: 'development', label: 'Development'},
-  { value: 'design', label: 'Design'},
-  { value: 'sales', label: 'Sales'},
-  { value: 'marketing', label: 'Marketing'}
+  { value: 'website', label: 'WEBSITE'},
+  { value: 'ui/ux', label: 'UI/UX'},
+  { value: 'sales', label: 'SALES'},
+  { value: 'marketing', label: 'MARKETING'},
+  { value: 'ios', label: 'IOS APP'},
+  { value: 'andriod', label: 'ANDRIOD'},
+  { value: 'branding', label: 'BRANDING'}
 ]
 
 export default function Create() {
@@ -24,6 +31,7 @@ export default function Create() {
   const { documents } = useCollection('users')
   const { addDocument, response } = useFirestore('projects')
   const [users, setUsers] = useState([])
+  const [category, setCategory] = useState([])
   const history = useHistory()
 
   // form field values
@@ -32,11 +40,13 @@ export default function Create() {
   const [thumbnailError, setThumbnailError] = useState(null)
   const [details, setDetails] = useState('')
   const [dueDate, setDueDate] = useState('')
-  const [category, setCategory] = useState('')
+  const [projectCategories, setProjectCategories] = useState([])
   const [assignedUsers, setAssignedUsers] = useState([])
   const [formError, setFormError] = useState(null)
 
+  
   useEffect(() => {
+    setCategory(categories)
     if (documents) {
       const options = documents.map(user => {
         return { value: user, label: user.displayName}
@@ -99,7 +109,7 @@ export default function Create() {
     const project = {
       name,
       details,
-      category: category.value,
+      categories: projectCategories,
       dueDate: timestamp.fromDate(new Date(dueDate)),
       comments: [],
       createdBy,
@@ -107,7 +117,6 @@ export default function Create() {
     }
 
     await addDocument(project, thumbnail)
-
     if (!response.error) {
       history.push('/projects')
     }
@@ -166,8 +175,9 @@ export default function Create() {
         <label>
           <span>Project Category:</span>
           <Select
-            onChange={option => setCategory(option)}
-            options={categories}
+            onChange={option => setProjectCategories(option)}
+            options={category}
+            isMulti
           />
         </label>
 

@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 
 // components & styles
-import ProjectList from '../../components/ProjectList'
+import ProjectList from '../../components/ProjectsList'
 import Header from '../../components/Header'
 import './Projects.css'
 
@@ -30,7 +30,7 @@ export default function Projects() {
       <div className="project__grid">
         <div className="working">
           <div className="project__grid-header">
-            <h3>Working</h3>
+            <h3 className='project__status'>Working<span>(02)</span></h3>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
               <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM18.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
             </svg>
@@ -43,19 +43,29 @@ export default function Projects() {
         </div>
         <div className="progress">
           <div className="project__grid-header">
-            <h3>In Progress</h3>
+            <h3 className='project__status'>In Progress<span>(02)</span></h3>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
               <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM18.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
             </svg>
           </div>
+          {documents && documents.map(project => (
+            <Link className='project__card' to={`/project/${project.id}`} key={project.id}>
+              <ProjectList project={project} />
+            </Link>
+          ))}
         </div>
         <div className="completed">
           <div className="project__grid-header">
-            <h3>Completed</h3>
+            <h3 className='project__status'>Completed<span>(02)</span></h3>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
               <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM18.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
             </svg>
           </div>
+          {documents && documents.map(project => (
+            <Link className='project__card' to={`/project/${project.id}`} key={project.id}>
+              <ProjectList project={project} />
+            </Link>
+          ))}
         </div>
       </div>
       

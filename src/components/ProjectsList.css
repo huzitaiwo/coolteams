@@ -20,8 +20,14 @@
   font-size: 1.3rem;
   margin-bottom: 10px;
 }
-.project__details {
+.project__details,
+.project__list .list small {
   color: #4B5563;
+}
+.project__list svg {
+  stroke: #4B5563;
+  stroke-opacity: 0.8;
+  margin-left: 5px;
 }
 .project__list .assigned-to {
   display: flex;
@@ -36,4 +42,32 @@
  margin-left: -7px;
  width: 30px;
  height: 30px;
+}
+.category {
+  display: inline-block;
+  margin: 10px 0;
+  padding: 5px 15px;
+  background: #fff;
+  border: none;
+  border-radius: 7px;
+  margin-right: 5px;
+  font-weight: 500;
+  font-size: 14px;
+}
+.category.website,
+.category.uiux {
+  background: #EDF1FF;
+  color:#2C5BFF;
+}
+.category.ios {
+  color:#FD7B38;
+  background: #FFF3ED;
+}
+.category.branding {
+  color: #7078BA;
+  background:#D7DBFD;
+}
+.category.andriod {
+  color: #60B158;
+  background:#E7F4E6;
 }
