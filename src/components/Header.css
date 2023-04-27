@@ -29,3 +29,24 @@
 .layout .add svg {
   stroke: #fff;
 }
+
+/* dark */
+.layout.dark .list,
+.layout.dark .grid {
+  background: #2b2f33;
+  border-color: #2b2f33;
+}
+.layout.dark .grid {
+  /* background: #fff; */
+  border-color: #F7423D;
+}
+.layout.dark .list svg {
+  stroke: #fff;
+}
+.layout.dark .grid svg {
+  stroke: #F7423D;
+}
+.layout.dark .add {
+  background: #F7423D;
+  border-color: #F7423D;
+}

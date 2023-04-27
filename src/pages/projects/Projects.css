@@ -7,6 +7,11 @@
   border: 1px solid #fff;
   margin-bottom: 30px;
 }
+.project__card.dark {
+  background: #2B2F33;
+  color: #fff;
+  border-color: #2B2F33;
+}
 .project__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -24,4 +29,7 @@
   font-weight: 500;
   font-size: 0.9rem;
   margin-left: 10px;
+}
+.project__status.dark span {
+  color: #F7F6F4;
 }

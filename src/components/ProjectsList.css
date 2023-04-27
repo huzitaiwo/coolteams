@@ -24,6 +24,10 @@
 .project__list .list small {
   color: #4B5563;
 }
+.project__details,
+.project__list .list small {
+  color: #4B5563;
+}
 .project__list svg {
   stroke: #4B5563;
   stroke-opacity: 0.8;
@@ -59,15 +63,50 @@
   background: #EDF1FF;
   color:#2C5BFF;
 }
-.category.ios {
+.category.ios,
+.category.marketing {
   color:#FD7B38;
   background: #FFF3ED;
 }
-.category.branding {
+.category.branding,
+.category.sales {
   color: #7078BA;
   background:#D7DBFD;
 }
 .category.andriod {
   color: #60B158;
   background:#E7F4E6;
+}
+
+/* dark */
+.project__list.dark .project__list .list small {
+  color: #fff;
+}
+.project__list.dark .project__details {
+  color: #F7F6F4;
+}
+.project__list.dark small {
+  color: #F7F6F4;
+}
+.project__list.dark svg {
+  stroke: #F7F6F4;
+}
+.category.dark.website,
+.category.dark.uiux {
+  color:#2C5BFF;
+  background: #273647;
+}
+.category.dark.ios,
+.category.dark.marketing {
+  color:#F7423D;
+  background: #403034;
+}
+.category.dark.branding,
+.category.dark.sales {
+  color: #CD9D2D;
+  background:#403D32;
+}
+.category.dark.andriod {
+  color: #60B158;
+  background:#313C37;
 }
