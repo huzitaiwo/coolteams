@@ -11,10 +11,10 @@ export default function ProjectList({ project }) {
 
   return (
     <div className='project__list'>
-      <img className='project-image' src={project.photoURL} alt="placeholder" />
+      <img className='project__image' src={project.photoURL} alt="placeholder" />
       <div className="card-body">
-        <h2>{project.name}</h2>
-        <p>{project.details}</p>
+        <h2 className='project__title'>{project.name}</h2>
+        <p className='project__details'>{project.details}</p>
         <div className='assigned-to'>
           <div className="list">
             <small>{project.assignedUsersList.length}</small>

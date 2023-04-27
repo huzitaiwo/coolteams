@@ -18,6 +18,10 @@
 }
 
 /* __________global styles__________ */
+/* main {
+  min-width: 100vw;
+  overflow-x: scroll;
+} */
 button {
   cursor: pointer;
   background: none;

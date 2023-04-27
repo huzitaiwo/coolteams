@@ -1,13 +1,24 @@
-.project__grid {
+/* .project__grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 20px;
-}
-.card {
+} */
+.project__card {
   display: block;
   text-decoration: none;
   color: #25283B;
   background: #fff;
   border-radius: 1rem;
   border: 1px solid #fff;
+}
+.project__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+.project__grid-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
 }
