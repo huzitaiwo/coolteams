@@ -149,15 +149,15 @@ export default function Create() {
         </label>
 
         <label>
-        <span>project thumbnail:</span>
-        <input
-          className={mode}
-          required
-          type="file"
-          onChange={handleFileChange}
-        />
-        {thumbnailError && <div className='error'>{thumbnailError}</div>}
-      </label>
+          <span>project thumbnail:</span>
+          <input
+            className={mode}
+            required
+            type="file"
+            onChange={handleFileChange}
+          />
+          {thumbnailError && <div className='error'>{thumbnailError}</div>}
+        </label>
 
         <label>
           <span>Project details:</span>
@@ -194,6 +194,7 @@ export default function Create() {
         <label>
           <span>Assign to:</span>
           <Select
+            className={`select ${mode}`}
             onChange={option => setAssignedUsers(option)}
             options={users}
             isMulti
@@ -203,6 +204,7 @@ export default function Create() {
         <label>
           <span>Project grade:</span>
           <Select
+            className={`select ${mode}`}
             onChange={option => setPriority(option)}
             options={priorities}
           />

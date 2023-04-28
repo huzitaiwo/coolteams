@@ -26,15 +26,7 @@ button {
   cursor: pointer;
   background: none;
   border: none;
-}
-.page-title {
-  font-size: 1.3rem;
-  color: #4B5563;
-  display: inline-block;
-}
-.page-title.dark {
-  color: #E3E4E4;
-}
+}s
 header,
 .sidebar {
   background: #fff;
