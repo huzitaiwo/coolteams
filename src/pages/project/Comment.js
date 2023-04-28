@@ -1,8 +1,14 @@
+// react packages
 import { useState } from "react"
+
+// firebase functions
 import { timestamp } from "../../firebase/config"
 import { useAuthContext } from "../../hooks/useAuthContext"
 import { useFirestore } from '../../hooks/useFirestore'
-import formatDistanceToNow from 'date-fns/formatDistanceToNow'
+
+// external packages
+import formatDistanceToNow from "date-fns/formatDistanceToNow"
+import { v4 as uuid } from "uuid"
 
 //components
 import Avatar from "../../components/Avatar"
@@ -12,6 +18,8 @@ const Comment = ({ project }) => {
   const { user } = useAuthContext()
   const { updateDocument, response } = useFirestore('projects')
 
+  console.log(user, project.comments)
+
   const handleSubmit =  async (e) => {
     e.preventDefault()
 
@@ -20,7 +28,7 @@ const Comment = ({ project }) => {
       photoURL: user.photoURL,
       content: newComment,
       createdAt: timestamp.fromDate(new Date()),
-      id: Math.random()
+      id: uuid()
     }
 
     await updateDocument(project.id, {
@@ -33,27 +41,27 @@ const Comment = ({ project }) => {
   }
 
   return (
-    <div className="project-comments">
-      <h4>Project comments</h4>
+    <div className="project__comments project__card">
+      <h3>Project comments</h3>
 
       <ul>
-        {project.comments.length > 0 && project.comments.map(comment => (
+        {project.comments && project.comments.map(comment => (
           <li key={comment.id}>
-            <div className="comment-author">
+            <div className="comment__author">
               <Avatar src={comment.photoURL} />
             <p>{comment.displayName}</p>
             </div>
-            <div className="comment-date">
+            <div className="comment__date">
               <p>{formatDistanceToNow(comment.createdAt.toDate(), { addSuffix: true })}</p>
             </div>
-            <div className="commnet-content">
+            <div className="commnet__content">
               <p>{comment.content}</p>
             </div>
           </li>
         ))}
       </ul>
 
-      <form onSubmit={handleSubmit} className="add-comment">
+      <form onSubmit={handleSubmit} className="add__comment">
         <label>
           <span>Add new comment</span>
           <textarea
@@ -61,8 +69,8 @@ const Comment = ({ project }) => {
             onChange={e => {setNewComment(e.target.value)}}
             value={newComment}          
           ></textarea>
-          {!response.isLoading && <button className="btn">send</button>}
-          {response.isLoading && <button className="btn">sending...</button>}
+          {!response.isLoading && <button className="btn">Add comment</button>}
+          {response.isLoading && <button className="btn">Adding comment...</button>}
           {response.error && <div className="error">{response.error}</div>}
         </label>
       </form>
@@ -70,4 +78,4 @@ const Comment = ({ project }) => {
   )
 }
 
-export default ProjectComment
+export default Comment
