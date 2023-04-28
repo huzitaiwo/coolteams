@@ -25,6 +25,12 @@ const categories = [
   { value: 'branding', label: 'BRANDING'}
 ]
 
+const priorities = [
+  { value: 'high', label: 'HIGH PRIORITY'},
+  { value: 'medium', label: 'MEDIUM'},
+  { value: 'low', label: 'LOW'}
+]
+
 export default function Create() {
   const { mode } = useTheme()
   const { user } = useAuthContext()
@@ -40,6 +46,7 @@ export default function Create() {
   const [thumbnailError, setThumbnailError] = useState(null)
   const [details, setDetails] = useState('')
   const [dueDate, setDueDate] = useState('')
+  const [priority, setPriority] = useState('')
   const [projectCategories, setProjectCategories] = useState([])
   const [assignedUsers, setAssignedUsers] = useState([])
   const [formError, setFormError] = useState(null)
@@ -114,11 +121,12 @@ export default function Create() {
       comments: [],
       createdBy,
       assignedUsersList,
+      priority: priority.value
     }
 
     await addDocument(project, thumbnail)
     if (!response.error) {
-      history.push('/projects')
+      history.push('/')
     }
   }
 
@@ -187,6 +195,14 @@ export default function Create() {
             onChange={option => setAssignedUsers(option)}
             options={users}
             isMulti
+          />
+        </label>
+
+        <label>
+          <span>Project grade:</span>
+          <Select
+            onChange={option => setPriority(option)}
+            options={priorities}
           />
         </label>
 

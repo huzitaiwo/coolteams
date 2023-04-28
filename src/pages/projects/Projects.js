@@ -28,7 +28,7 @@ export default function Projects() {
     <>
       <Header />
       <div className="project__grid">
-        <div className="working">
+        <div className="working__task">
           <div className="project__grid-header">
             <h3 className={`project__status ${mode}`}>Working<span>(02)</span></h3>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
@@ -41,7 +41,7 @@ export default function Projects() {
             </Link>
           ))}
         </div>
-        <div className="progress">
+        <div className="progress__task">
           <div className="project__grid-header">
             <h3 className={`project__status ${mode}`}>In Progress<span>(02)</span></h3>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
@@ -54,7 +54,7 @@ export default function Projects() {
             </Link>
           ))}
         </div>
-        <div className="completed">
+        <div className="completed__task">
           <div className="project__grid-header">
             <h3 className={`project__status ${mode}`}>Completed<span>(02)</span></h3>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">

@@ -1,0 +1,7 @@
+.project {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+}
+.project .project__image {
+  height: 600px;
+}

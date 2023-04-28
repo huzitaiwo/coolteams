@@ -23,7 +23,7 @@
   align-items: center;
   margin-bottom: 15px;
 }
-.project__status span {
+h3.project__status span {
   display: inline-block;
   color: #4b5563;
   font-weight: 500;

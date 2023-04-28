@@ -11,24 +11,32 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.msg {
+.msg,
+.status {
   border: none;
   border-radius: 5px;
   padding: 10px;
   margin: 10px 0;
   display: inline-block;
+  border: 3px solid #fff;
 }
-.error {
-  color: #FD8B51;
+.error,
+.high {
+  color: #F7423D;
   background: #FFF3EA;
+  border-color: #F7423D;
 }
-.success {
+.success,
+.completed {
   color: #60B158;
   background: #E7F4E6;
+  border-color: #60B158;
 }
-.warning {
+.warning,
+.medium {
   color: #FD8B51;
   background: #FFF3EA;
+  border-color: #FD8B51;
 }
 .w-6 {
   width: 23px;
