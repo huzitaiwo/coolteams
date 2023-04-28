@@ -38,9 +38,43 @@ body {
   background: #FFF3EA;
   border-color: #FD8B51;
 }
+.low {
+  color: #E25AB4;
+  background: #F5ECF2;
+  border-color: #E25AB4;
+}
+.high,
+.medium,
+.low {
+  background: none;
+  padding: 4px 12px;
+}
+.progress_select {
+  padding: 4px 12px;
+  color: #7078BA;
+  background: #D7DBFD;
+  border-color: #D7DBFD;
+}
+.completed {
+  border-color:#E7F4E6;
+  padding: 5px 12px;
+}
 .w-6 {
   width: 23px;
 }
 .w-4 {
   width: 17px;
+}
+
+/* dark mode */
+.error.dark,
+.warning.dark {
+  color: #fff;
+  background: #F7423D;
+  border-color: #F7423D;
+}
+.success.dark {
+  color: #fff;
+  background: #60B158;
+  border-color: #60B158;
 }

@@ -33,7 +33,6 @@ export default function ProjectsList({ project }) {
             ))}
           </ul>
         </div>
-        {/* <p className='msg warning'>Due by: {project.dueDate.toDate().toDateString()}</p> */}
       </div>
     </div>
   )

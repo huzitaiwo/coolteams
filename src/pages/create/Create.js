@@ -16,13 +16,13 @@ import { timestamp } from '../../firebase/config'
 import './Create.css'
 
 const categories = [
-  { value: 'website', label: 'WEBSITE'},
-  { value: 'ui/ux', label: 'UI/UX'},
-  { value: 'sales', label: 'SALES'},
-  { value: 'marketing', label: 'MARKETING'},
-  { value: 'ios', label: 'IOS APP'},
-  { value: 'andriod', label: 'ANDRIOD'},
-  { value: 'branding', label: 'BRANDING'}
+  { value: 'website', label: 'Website'},
+  { value: 'ui/ux', label: 'ui/ux'},
+  { value: 'sales', label: 'Sales'},
+  { value: 'marketing', label: 'Marketing'},
+  { value: 'ios', label: 'IOS app'},
+  { value: 'andriod', label: 'Bndriod'},
+  { value: 'branding', label: 'Branding'}
 ]
 
 const priorities = [
@@ -121,7 +121,8 @@ export default function Create() {
       comments: [],
       createdBy,
       assignedUsersList,
-      priority: priority.value
+      priority: priority.value,
+      completed: false
     }
 
     await addDocument(project, thumbnail)

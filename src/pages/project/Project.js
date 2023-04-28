@@ -28,14 +28,19 @@ export default function Project() {
       <div className={`project__card ${mode}`}>
         {project && (
           <>
-            <div className="project__status">
-              <span className="status completed">Completed</span>
-              <span className="status high-priority">High Priority</span>
-            </div>
             <img className='project__image' src={project.photoURL} alt="placeholder" />
             <div className="card-body">
               <h2 className={`project__title ${mode}`}>{project.name}</h2>
               <p className={`project__details ${mode}`}>{project.details}</p>
+              <div className="project__status">
+                {project.isCompleted && (
+                  <span className="status completed">Completed</span>
+                )}
+                {!project.isCompleted && (
+                  <span className="status progress_select">progress</span>
+                )}
+                <span className="status high">High Priority</span>
+              </div>
               <ul className={`project__category ${mode}`}>
                 {project.categories.map(catogory => (
                   <span className={`category ${catogory.value} ${mode}`} key={catogory.value}>{catogory.label}</span>
@@ -56,7 +61,7 @@ export default function Project() {
                   ))}
                 </ul>
               </div>
-              <p className='msg warning'>Due by: {project.dueDate.toDate().toDateString()}</p>
+              <p className={`msg warning ${mode}`}>Due by: {project.dueDate.toDate().toDateString()}</p>
             </div>
           </>
         )}
