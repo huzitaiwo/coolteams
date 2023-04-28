@@ -21,14 +21,14 @@ const categories = [
   { value: 'sales', label: 'Sales'},
   { value: 'marketing', label: 'Marketing'},
   { value: 'ios', label: 'IOS app'},
-  { value: 'andriod', label: 'Bndriod'},
+  { value: 'andriod', label: 'Andriod'},
   { value: 'branding', label: 'Branding'}
 ]
 
 const priorities = [
-  { value: 'high', label: 'HIGH PRIORITY'},
-  { value: 'medium', label: 'MEDIUM'},
-  { value: 'low', label: 'LOW'}
+  { value: 'high', label: 'High priority'},
+  { value: 'medium', label: 'Medium priority'},
+  { value: 'low', label: 'Low priority'}
 ]
 
 export default function Create() {
@@ -122,7 +122,8 @@ export default function Create() {
       createdBy,
       assignedUsersList,
       priority: priority.value,
-      completed: false
+      isCompleted: false,
+      inProgress: false
     }
 
     await addDocument(project, thumbnail)

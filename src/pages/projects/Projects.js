@@ -11,7 +11,31 @@ import { useTheme } from '../../hooks/useTheme'
 
 export default function Projects() {
   const { mode } = useTheme()
-  const { documents, isPending, error } = useCollection('projects')
+  const { documents: projects, isPending, error } = useCollection('projects')
+
+  const completedProjects = projects ? projects.filter(document => {
+    let completed = false
+    if (document.isCompleted) {
+      completed = true
+    }
+    return completed
+  }) : null
+
+  const projectsInProgress = projects ? projects.filter(document => {
+    let progress = false
+    if (document.inProgress) {
+      progress = true
+    }
+    return progress
+  }) : null
+
+  const workProjects = projects ? projects.filter(document => {
+    let work = false
+    if (!document.inProgress && !document.isCompleted) {
+      work = true
+    }
+    return work
+  }) : null
 
   if (error) {
     return <div className='error'>{error}</div>
@@ -20,7 +44,7 @@ export default function Projects() {
     return <h4>loading...</h4>
   }
 
-  // if (documents.length === 0) {
+  // if (projects.length === 0) {
   //   return <p className={`project-redirect ${mode}`}>No projects yet! Add a new project <Link to='/create'>here</Link></p>
   // }
 
@@ -35,7 +59,7 @@ export default function Projects() {
               <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM18.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
             </svg>
           </div>
-          {documents && documents.map(project => (
+          {projects && workProjects.map(project => (
             <Link className={`project__card ${mode}`} to={`/project/${project.id}`} key={project.id}>
               <ProjectsList project={project} />
             </Link>
@@ -48,7 +72,7 @@ export default function Projects() {
               <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM18.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
             </svg>
           </div>
-          {documents && documents.map(project => (
+          {projects && projectsInProgress.map(project => (
             <Link className={`project__card ${mode}`} to={`/project/${project.id}`} key={project.id}>
               <ProjectsList project={project} />
             </Link>
@@ -61,7 +85,7 @@ export default function Projects() {
               <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM18.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
             </svg>
           </div>
-          {documents && documents.map(project => (
+          {projects && completedProjects.map(project => (
             <Link className={`project__card ${mode}`} to={`/project/${project.id}`} key={project.id}>
               <ProjectsList project={project} />
             </Link>
