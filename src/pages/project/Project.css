@@ -36,6 +36,13 @@
 
 .project__comments h3 {
   text-transform: uppercase;
+  margin-bottom: 30px;
+}
+.project h3 small {
+  font-size: 12px;
+  text-transform: none;
+  color: #5F6365;
+  margin-left: 10px;
 }
 .project__comments li {
   background: #FFF;

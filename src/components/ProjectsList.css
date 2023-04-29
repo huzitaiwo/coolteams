@@ -91,6 +91,9 @@
  width: 30px;
  height: 30px;
 }
+.userIcon {
+  margin-right: 15px;
+}
 
 /* dark */
 .project__list.dark .list small,

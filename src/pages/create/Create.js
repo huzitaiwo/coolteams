@@ -17,7 +17,7 @@ import './Create.css'
 
 const categories = [
   { value: 'website', label: 'Website'},
-  { value: 'ui/ux', label: 'ui/ux'},
+  { value: 'uiux', label: 'ui/ux'},
   { value: 'sales', label: 'Sales'},
   { value: 'marketing', label: 'Marketing'},
   { value: 'ios', label: 'IOS app'},
