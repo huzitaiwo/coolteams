@@ -15,11 +15,11 @@
   background: #fff;
   border-color: #fff;
 }
-.layout .grid.active {
+.layout .active {
   background: #FFF3ED;
   border-color: #FD7B38;
 }
-.layout .grid svg {
+.layout .active svg {
   stroke: #FD7B38;
 }
 .layout .add {
@@ -36,14 +36,15 @@
   background: #2b2f33;
   border-color: #2b2f33;
 }
-.layout.dark .grid {
+.layout.dark .active {
   /* background: #fff; */
   border-color: #F7423D;
 }
-.layout.dark .list svg {
+.layout.dark .list svg,
+.layout.dark .grid svg {
   stroke: #fff;
 }
-.layout.dark .grid svg {
+.layout.dark .active svg {
   stroke: #F7423D;
 }
 .layout.dark .add {

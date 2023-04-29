@@ -33,6 +33,7 @@ body {
   border-color: #60B158;
 }
 .warning,
+.warning__text,
 .medium {
   color: #FD8B51;
   background: #FFF3EA;
@@ -82,4 +83,9 @@ body {
   color: #fff;
   background: #60B158;
   border-color: #60B158;
+}
+.warning__text.dark {
+  color: #F7423D;
+  background: #403034;
+  border-color: #F7423D;
 }

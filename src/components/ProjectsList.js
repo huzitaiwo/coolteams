@@ -9,7 +9,7 @@ export default function ProjectsList({ project }) {
 
   return (
     <div className={`project__list ${mode}`}>
-      <img className='project__image' src={project.photoURL} alt="placeholder" />
+      {/* <img className='project__image' src={project.photoURL} alt="placeholder" /> */}
       <div className="card-body">
         <h2 className={`project__title ${mode}`}>{project.name}</h2>
         <p className={`project__details ${mode}`}>{project.details}</p>

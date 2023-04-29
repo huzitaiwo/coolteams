@@ -1,6 +1,11 @@
+// components
+import Header from '../../components/Header'
 
 export default function Task() {
   return (
-    <div>Task</div>
+    <div>
+      <Header list={true} grid={false} />
+      <h1>TASK</h1>
+    </div>
   )
 }

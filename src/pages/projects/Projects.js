@@ -50,7 +50,7 @@ export default function Projects() {
 
   return (
     <>
-      <Header />
+      <Header list={false} grid={true} />
       {projects && (
         <div className="project__grid">
           <div className="working__task">
