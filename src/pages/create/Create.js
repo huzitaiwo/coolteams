@@ -202,7 +202,7 @@ export default function Create() {
         </label>
 
         <label>
-          <span>Project grade:</span>
+          <span>Project priority:</span>
           <Select
             className={`select ${mode}`}
             onChange={option => setPriority(option)}

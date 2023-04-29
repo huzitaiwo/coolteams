@@ -73,6 +73,11 @@ body {
   background: #F7423D;
   border-color: #F7423D;
 }
+.medium.dark {
+  color: #fff;
+  background: #FD8B51;
+  color: #FD8B51;
+}
 .success.dark {
   color: #fff;
   background: #60B158;

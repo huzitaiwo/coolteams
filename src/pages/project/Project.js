@@ -44,7 +44,7 @@ export default function Project() {
                 {!project.isCompleted && !project.inProgress && (
                   <span className="status progress_select">start</span>
                 )}
-                <span className="status high">High Priority</span>
+                <span className={`status ${project.priority}`}>{project.priority} Priority</span>
               </div>
               <ul className={`project__category ${mode}`}>
                 {project.categories.map(catogory => (
