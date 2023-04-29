@@ -38,7 +38,10 @@ export default function Project() {
                 {project.isCompleted && (
                   <span className="status completed">Completed</span>
                 )}
-                {!project.isCompleted && (
+                {project.inProgress && (
+                  <span className="status completed">In Progress</span>
+                )}
+                {!project.isCompleted && !project.inProgress && (
                   <span className="status progress_select">progress</span>
                 )}
                 <span className="status high">High Priority</span>
