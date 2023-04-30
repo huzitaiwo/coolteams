@@ -1,5 +1,6 @@
 // react packages
 import { useEffect, useState } from 'react'
+import { useParams, useHistory } from 'react-router-dom'
 import Select from 'react-select'
 
 // pages, components, hooks, context
@@ -10,6 +11,9 @@ import { useTheme } from '../../hooks/useTheme'
 import { useFirestore } from '../../hooks/useFirestore'
 import { useAuthContext } from '../../hooks/useAuthContext'
 import { timestamp } from '../../firebase/config'
+
+// external packages
+import { v4 as uuid } from "uuid"
 
 // styles
 // import './CreateTask.css'
@@ -31,12 +35,16 @@ const tags = [
   { value: 'bootstrap', label: 'Bootstrap'},
   { value: 'tailwind', label: 'Tailwind'},
   { value: 'scss', label: 'SCSS'},
+  { value: 'flutter', label: 'Flutter'},
+  { value: 'native', label: 'React Native'},
 ]
 
-export default function CreateTask({ project }) {
+export default function CreateTask() {
+  const { id } = useParams()
+  const history = useHistory()
   const { mode } = useTheme()
   const { user } = useAuthContext()
-  const { document } = useDocument('projects', project.id)
+  const { document: project } = useDocument('projects', id)
   const [users, setUsers] = useState([])
   const [tag, setTag] = useState([])
   const { updateDocument, response } = useFirestore('projects')
@@ -50,14 +58,14 @@ export default function CreateTask({ project }) {
 
   useEffect(() => {
     setTag(tags)
-    if (document) {
-      const options = document.assignedUsersList.map(user => {
+    if (project) {
+      const options = project.assignedUsersList.map(user => {
         return { value: user, label: user.displayName}
       })
       setUsers(options)
     }
 
-  }, [document])
+  }, [project])
 
   const handleSubmit = async e => {
     e.preventDefault()
@@ -94,19 +102,17 @@ export default function CreateTask({ project }) {
       assignedUsersList,
       createdBy,
       isCompleted: false,
-      inProgress: false
+      inProgress: false,
+      id: uuid()
     }
 
     await updateDocument(project.id, {
-      tags: [ ...project.tasks, task ]
+      tasks: [ ...project.tasks, task ]
     })
-
     if (!response.error) {
-      setName('')
-      setTaskTags([])
-      setAssignedUsers([])
-      setDueDate('')
+      history.push(`/project/${project.id}`)
     }
+
   }
 
 

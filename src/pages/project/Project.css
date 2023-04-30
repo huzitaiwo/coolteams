@@ -33,8 +33,23 @@
  width: 50px;
  height: 50px;
 }
+.project__task {
+  background: #717EEE;
+  padding: 10px 15px;
+  border-radius: 10px;
+  color: #fff;
+}
+.task__name {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+}
+.task_user .avatar {
+  width: 30px;
+  height: 30px;
+}
 
-.project__comments h3 {
+.project__comments h3,
+.project__tasks h3 {
   text-transform: uppercase;
   margin-bottom: 30px;
 }
@@ -44,9 +59,10 @@
   color: #5F6365;
   margin-left: 10px;
 }
-.project__comments li {
+.project__comments li
+{
   background: #FFF;
-  padding: 20px;
+  padding: 15px;
   border-radius: 10px;
   margin-bottom: 10px;
 }

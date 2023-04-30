@@ -6,14 +6,15 @@ import { useTheme } from './hooks/useTheme'
 import './App.css'
 
 // pages && components
+import CreateTask from './pages/createtask/CreateTask'
 import Dashboard from './pages/dashboard/Dashboard'
 import Settings from './pages/settings/Settings'
 import Calender from './pages/calender/Calender'
 import Projects from './pages/projects/Projects'
 import Project from './pages/project/Project'
-import Create from './pages/create/Create'
 import Signup from './pages/signup/Signup'
 import Sidebar from './components/Sidebar'
+import Create from './pages/create/Create'
 import Navbar from './components/Navbar'
 import Login from './pages/login/Login'
 import Task from './pages/task/Task'
@@ -54,6 +55,10 @@ function App() {
                 <Route path='/create'>
                   {!user && <Redirect to='/login' />}
                   {user && <Create />}
+                </Route>
+                <Route path='/addtask/:id'>
+                  {!user && <Redirect to='/login' />}
+                  {user && <CreateTask />}
                 </Route>
                 <Route path='/settings'>
                   {!user && <Redirect to='/login' />}

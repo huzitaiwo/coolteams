@@ -47,7 +47,7 @@ const Comment = ({ project }) => {
     <div className={`project__comments ${mode}`}>
       {project && (
         <>
-          <h3>Comments <small>{project.comments.length} comments</small></h3>
+          <h3>Comments <small>{project.comments.length} comment{project.comments.length > 1 && <span>s</span>}</small></h3>
 
           <ul>
             {project.comments && project.comments.map(comment => (
@@ -76,7 +76,7 @@ const Comment = ({ project }) => {
               {!response.isLoading && (
                 <button className={`send ${mode}`}>
                   <svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0_576_43)">
+                    <g clipPath="url(#clip0_576_43)">
                     <path d="M18.65 31.3778L13.7003 26.428L17.7072 19.1213L10.4004 23.1282L5.45068 18.1785L25.4854 11.3431L18.65 31.3778Z" fill="white"/>
                     </g>
                     <defs>
