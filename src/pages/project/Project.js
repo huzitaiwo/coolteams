@@ -1,13 +1,14 @@
 // react&react-router packages
 import { useParams } from 'react-router-dom'
 
-// components
+// hooks
 import { useDocument } from '../../hooks/useDocument'
 import { useTheme } from '../../hooks/useTheme'
 
-// hooks
+// components
 import Avatar from '../../components/Avatar'
 import Comment from './Comment'
+import CreateTask from './CreateTask'
 
 // styles
 import './Project.css'
@@ -60,6 +61,7 @@ export default function Project() {
               </ul>
               <p className={`msg warning ${mode}`}>Due by: {project.dueDate.toDate().toDateString()}</p>
             </div>
+            <CreateTask project={project}/>
           </>
         )}
       </div>

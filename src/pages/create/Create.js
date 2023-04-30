@@ -91,7 +91,7 @@ export default function Create() {
     setFormError(null)
 
     if (!category) {
-      setFormError('Please select a project category')
+      setFormError('Please select project categories')
       return
     }
     if (assignedUsers.length < 1) {
@@ -119,6 +119,7 @@ export default function Create() {
       categories: projectCategories,
       dueDate: timestamp.fromDate(new Date(dueDate)),
       comments: [],
+      tasks:[],
       createdBy,
       assignedUsersList,
       priority: priority.value,
