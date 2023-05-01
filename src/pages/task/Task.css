@@ -1,6 +1,11 @@
 .project__tasks {
   color: #444858;
   stroke: #444858;
+  text-decoration: none;
+}
+.project__tasks a {
+  color: #444858;
+  text-decoration: none;
 }
 .project__tasks .h3 {
   background: #fff;
@@ -15,6 +20,10 @@
   width: 30px;
   height: 30px;
   margin-right: 5px;
+}
+svg.true {
+  fill: #60B158;
+  stroke: #fff;
 }
 .thead {
   color: #9C9FAD;
@@ -45,14 +54,21 @@
 .task__duedate:last-of-type {
   border-right-color: transparent;
 }
-.td > div:first-of-type {
-  border-left: 4px solid #444858;
+.task__title {
+  border-left: 4px solid #9C9FAD;
   font-weight: 600;
   font-size: 1.1rem;
-}
-.task__title {
   display: flex;
   align-items: center;
+}
+.task__title-high {
+  border-left-color: #F7423D;
+}
+.task__title-medium {
+  border-left-color: #FD8B51;
+}
+.task__title-low {
+  border-left-color: #E25AB4;
 }
 .task__title svg {
   margin: 0 10px 0 5px;

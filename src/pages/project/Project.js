@@ -80,7 +80,7 @@ export default function Project() {
                       <div className='task'>
                         <ul className='tags'>
                           {task.tags.map(tag => (
-                            <li className={`tag ${tag.value} ${mode}`} key={tag.value}>{tag.label}</li>
+                            <li className={`tag tag__${tag.value} ${mode}`} key={tag.value}>{tag.label}</li>
                           ))}
                         </ul>
                         <div>

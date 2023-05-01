@@ -23,6 +23,7 @@ const tags = [
   { value: 'vue', label: 'Vuejs'},
   { value: 'node', label: 'Nodejs'},
   { value: 'xd', label: 'Adobe XD'},
+  { value: 'illustrator', label: 'Adobe I'},
   { value: 'photoshop', label: 'Photoshop'},
   { value: 'figma', label: 'Figma'},
   { value: 'firebase', label: 'Firebase'},
@@ -99,15 +100,16 @@ export default function CreateTask() {
       assignedUsersList,
       createdBy,
       isCompleted: false,
-      inProgress: false
+      inProgress: false,
+      projectID: project.id
     }
 
     await updateDocument(project.id, {
-      tags: [ ...project.tasks, task ]
+      tasks: [ ...project.tasks, task ]
     })
 
     if (!response.error) {
-      history.push(`project/${id}`)
+      history.push(`/project/${id}`)
     }
   }
 
@@ -143,6 +145,7 @@ export default function CreateTask() {
             className={`select ${mode}`}
             onChange={option => setAssignedUsers(option)}
             options={users}
+            isMulti
           />
         </label>
 
