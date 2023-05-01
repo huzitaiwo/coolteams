@@ -30,7 +30,7 @@
  width: 50px;
  height: 50px;
 }
-.project__task {
+.project__task-list {
   background: #717EEE;
   padding: 10px 15px;
   border-radius: 10px;
@@ -38,7 +38,7 @@
   margin-bottom: 10px;
   box-shadow: 5px 5px 15px #CECFD7;
 }
-.project__task:last-of-type {
+.project__task-list:last-of-type {
   margin-bottom: 0px;
 }
 .task__name {
@@ -62,7 +62,7 @@
 }
 
 .project__comments h3,
-.project__tasks h3 {
+.project__tasks-list h3 {
   text-transform: uppercase;
   margin-bottom: 30px;
 }

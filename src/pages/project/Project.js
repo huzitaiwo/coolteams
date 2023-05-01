@@ -67,7 +67,7 @@ export default function Project() {
               </>
             )}
           </div>
-          <div className={`project__tasks ${mode}`}>
+          <div className={`project__tasks-list ${mode}`}>
             {project && (
               <>
                 <h3>Tasks <small>{project.tasks.length} task{project.tasks.length > 1 && <span>s</span>}</small></h3>

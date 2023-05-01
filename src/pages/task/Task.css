@@ -1,0 +1,47 @@
+.project__tasks {
+  color: #444858;
+  stroke: #444858;
+}
+.project__tasks h3 {
+  background: #fff;
+  padding: 5px 10px;
+  border-bottom: 1px solid #F7F6F4;
+  box-shadow: 5px 5px 15px #F7F6F4;
+  margin-top: 20px;
+}
+.thead, 
+.td {
+  display: grid;
+  grid-template-columns: 500px 1fr 1fr 1fr;
+  box-shadow: 5px 5px 15px #F7F6F4;
+  background: #fff;
+}
+.thead {
+  display: grid;
+  grid-template-columns: 500px 1fr 1fr 1fr;
+  color: #9C9FAD;
+}
+.thead > div,
+.td > div {
+  border-right: 1px solid #F7F6F4;
+  padding: 5px 0 5px 15px;
+}
+.thead > div:last-of-type {
+  border-color: #fff;
+}
+.td > div {
+  /* border-bottom: 1px solid #F7F6F4;  */
+  padding: 15px 15px;
+  border-bottom: 1px solid #F7F6F4;
+}
+.td > div:first-of-type {
+  border-left: 4px solid #444858;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+.task__title {
+  display: flex;
+}
+.task__title svg {
+  margin: 0 10px 0 5px;
+}
