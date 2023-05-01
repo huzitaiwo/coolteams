@@ -15,6 +15,10 @@
   background: #fff;
   border-color: #fff;
 }
+.layout .list svg,
+.layout .grid svg {
+  stroke: #64666C;
+}
 .layout .active {
   background: #FFF3ED;
   border-color: #FD7B38;

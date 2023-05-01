@@ -75,7 +75,7 @@ export default function Project() {
                 <ul>
                   {project.tasks && project.tasks.map(task => (
                     <li className='project__task' key={task.id}>
-                      {/* <small>{task.duedate.toDate().toDateString()}</small> */}
+                      <small>{task.dueDate.toDate().toDateString()}</small>
                       <h4 className='task__name'>{task.name}</h4>
                       <div className='task'>
                         <ul className='tags'>

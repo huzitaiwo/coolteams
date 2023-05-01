@@ -9,10 +9,10 @@
 }
 .logo svg {
   width: 80px;
-  stroke: #FD8B51;
+  stroke: #64666C;
 }
 .logo.dark svg {
-  stroke: #F7423D;
+  stroke: #E3E4E4;
 }
 .navigation-links li {
   list-style: none;
@@ -31,7 +31,7 @@
   stroke: #F7423D;
 }
 .navigation-links a {
-  color: #4B5563;
+  color: #64666C;
   text-decoration: none;
   display: block;
   padding: 10px 20px;
