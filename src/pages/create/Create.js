@@ -6,10 +6,10 @@ import Select from 'react-select'
 // pages, components, hooks, context
 import { useCollection } from '../../hooks/useCollection'
 import { useTheme } from '../../hooks/useTheme'
+import { useAuthContext } from '../../hooks/useAuthContext'
 
 // firebase function
 import { useFirestore } from '../../hooks/useFirestore'
-import { useAuthContext } from '../../hooks/useAuthContext'
 import { timestamp } from '../../firebase/config'
 
 // styles
