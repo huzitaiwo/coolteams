@@ -119,7 +119,7 @@ export default function Create() {
       categories: projectCategories,
       dueDate: timestamp.fromDate(new Date(dueDate)),
       comments: [],
-      tasks:[],
+      tasks: [],
       createdBy,
       assignedUsersList,
       priority: priority.value,

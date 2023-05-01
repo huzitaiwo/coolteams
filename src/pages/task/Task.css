@@ -2,37 +2,50 @@
   color: #444858;
   stroke: #444858;
 }
-.project__tasks h3 {
+.project__tasks .h3 {
   background: #fff;
-  padding: 5px 10px;
+  padding: 10px;
   border-bottom: 1px solid #F7F6F4;
   box-shadow: 5px 5px 15px #F7F6F4;
   margin-top: 20px;
+  text-transform: uppercase;
+  border-radius: 7px 7px 0 0;
+}
+.project__tasks .avatar {
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+}
+.thead {
+  color: #9C9FAD;
+  font-weight: 500;
+  border-radius: 10px;
 }
 .thead, 
 .td {
   display: grid;
-  grid-template-columns: 500px 1fr 1fr 1fr;
+  grid-template-columns: repeat(6, 1fr);
   box-shadow: 5px 5px 15px #F7F6F4;
   background: #fff;
 }
-.thead {
-  display: grid;
-  grid-template-columns: 500px 1fr 1fr 1fr;
-  color: #9C9FAD;
+.thead > div:first-of-type, 
+.td > div:first-of-type{
+  grid-column: 1/4;
 }
 .thead > div,
-.td > div {
+.td > * {
   border-right: 1px solid #F7F6F4;
+  border-bottom: 1px solid #F7F6F4;
   padding: 5px 0 5px 15px;
 }
-.thead > div:last-of-type {
-  border-color: #fff;
+.thead > div {
+  padding: 15px;
 }
-.td > div {
-  /* border-bottom: 1px solid #F7F6F4;  */
-  padding: 15px 15px;
-  border-bottom: 1px solid #F7F6F4;
+/* .td:last-of-type {
+  border-radius: 0 0 10px 10px;
+} */
+.thead > div:last-of-type {
+  border-color: none;
 }
 .td > div:first-of-type {
   border-left: 4px solid #444858;
@@ -41,7 +54,65 @@
 }
 .task__title {
   display: flex;
+  align-items: center;
 }
 .task__title svg {
   margin: 0 10px 0 5px;
 }
+.task_tag {
+  display: inline-block;
+  padding: 5px 10px;
+  border: 1px solid #F7F6F4;
+  border-radius: 5px;
+  margin-right: 5px;
+  font-weight: 500;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-bottom: 3px;
+}
+.html,
+.javascript,
+.firebase {
+  color: #FFBB55;
+  border-color: #FFBB55;
+}
+.css,
+.react,
+.python,
+.photoshop,
+.native {
+  color: #45BFFF;
+  border-color: #45BFFF;
+}
+.vue,
+.node,
+.tailwind {
+  color: #60B158;
+  border-color: #60B158;
+}
+.xd,
+.figma,
+.php,
+.bootstrap,
+.flutter,
+.scss {
+  color: #717EEE;
+  border-color: #717EEE;
+}
+.task__user {
+  text-transform: capitalize;
+  margin-bottom: 5px;
+}
+.task__user,
+.task__duedate,
+.task__tag {
+  display: flex;
+  align-items: center;
+}
+
+/* dark mode */
+.project__tasks.dark .thead, 
+.project__tasks.dark .td,
+.project__tasks.dark .h3 {
+  box-shadow: none;
+} 

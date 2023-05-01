@@ -12,9 +12,6 @@ import { useFirestore } from '../../hooks/useFirestore'
 import { useAuthContext } from '../../hooks/useAuthContext'
 import { timestamp } from '../../firebase/config'
 
-// external packages
-import { v4 as uuid } from "uuid"
-
 // styles
 // import './CreateTask.css'
 
@@ -102,17 +99,16 @@ export default function CreateTask() {
       assignedUsersList,
       createdBy,
       isCompleted: false,
-      inProgress: false,
-      id: uuid()
+      inProgress: false
     }
 
     await updateDocument(project.id, {
-      tasks: [ ...project.tasks, task ]
+      tags: [ ...project.tasks, task ]
     })
-    if (!response.error) {
-      history.push(`/project/${project.id}`)
-    }
 
+    if (!response.error) {
+      history.push(`project/${id}`)
+    }
   }
 
 
@@ -147,7 +143,6 @@ export default function CreateTask() {
             className={`select ${mode}`}
             onChange={option => setAssignedUsers(option)}
             options={users}
-            isMulti
           />
         </label>
 
