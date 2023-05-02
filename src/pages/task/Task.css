@@ -125,7 +125,8 @@ svg.true {
 }
 
 /* dark mode */
-.project__tasks.dark {
+.project__tasks.dark,
+.project__tasks.dark .td {
   color: #ABADAE;
   stroke: #ABADAE;
 }
