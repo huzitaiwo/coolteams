@@ -37,3 +37,21 @@ h3.project__status span {
 .project__status.dark span {
   color: #F7F6F4;
 }
+
+/* media query */
+@media (max-width: 1200px) {
+  .project__grid {
+    gap: 15px;
+  }
+  .project__card {
+    margin-bottom: 15px;
+  }
+}
+@media (max-width: 1000px) {
+  .project__grid {
+    display: block;
+  }
+  .project__card {
+    margin-bottom: 15px;
+  }
+}

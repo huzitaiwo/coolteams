@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 
 // components & pages
 import ProjectsList from '../../components/ProjectsList'
+import Header from '../../components/Header'
 
 // hooks
 import { useCollection } from '../../hooks/useCollection'
@@ -48,7 +49,7 @@ export default function Dashboard() {
     <div>
       {documents && (
         <>
-          <h1>Dashboard</h1>
+          <Header grid={true} list={false} />
           <div className="project__grid">
             <div className="my__projects">
               <div className="project__grid-header">

@@ -33,13 +33,14 @@ svg.true {
 .thead, 
 .td {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   box-shadow: 5px 5px 15px #F7F6F4;
   background: #fff;
 }
 .thead > div:first-of-type, 
 .td > div:first-of-type{
-  grid-column: 1/4;
+  /* grid-column: 1/4; */
+  width: 450px;
 }
 .thead > div,
 .td > * {
@@ -140,4 +141,16 @@ svg.true {
 .project__tasks.dark .td > *,
 .project__tasks.dark .h3 {
   border-color: #32363B;
+}
+
+@media (max-width: 1200px) {
+  .thead {
+    display: none;
+  }
+  .td {
+    grid-template-columns: 1fr;
+  }
+  .task__title {
+    width: 100%;
+  }
 }

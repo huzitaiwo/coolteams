@@ -53,3 +53,29 @@
   background: linear-gradient(to right, #3E3633, #2B2F33);
   border-color: #F7423D;
 }
+
+/* media query */
+@media (max-width: 1200px) {
+  .sidebar {
+    width: 220px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .sidebar {
+    width: auto;
+  }
+  .sidebar .logo {
+    border-bottom: 1px solid #F7F6F4;
+  }
+  .sidebar .logo svg {
+    width: 50px;
+  }
+  .navigation-links span {
+    display: none;
+  }
+  .navigation-links a.active {
+    border: none;
+    text-align: center;
+  }
+}
