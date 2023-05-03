@@ -156,3 +156,9 @@
 .project__task.dark {
   box-shadow: none;
 }
+
+@media (max-width: 900px) {
+  .project {
+    grid-template-columns: 1fr;
+  }
+}

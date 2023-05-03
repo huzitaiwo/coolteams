@@ -34,7 +34,7 @@ export default function Project() {
           <div className={`project__card ${mode}`}>
             {project && (
               <>
-                {/* <img className='project__image' src={project.photoURL} alt="placeholder" /> */}
+                <img className='project__image' src={project.photoURL} alt="placeholder" />
                 <div className="card-body">
                   <h2 className={`project__title ${mode}`}>{project.name}</h2>
                   <p className={`project__details ${mode}`}>{project.details}</p>
