@@ -26,6 +26,11 @@ body {
   background: #FFF3EA;
   border-color: #F7423D;
 }
+.high {
+  color: #FF7782;
+  background: #FFF3EA;
+  border-color: #FF7782;
+}
 .success,
 .completed {
   color: #60B158;
@@ -39,10 +44,15 @@ body {
   background: #FFF3EA;
   border-color: #FD8B51;
 }
+.medium {
+  color: #FFBB55;
+  background: #FFF3EA;
+  border-color: #FFBB55;
+}
 .low {
-  color: #E25AB4;
+  color: #717EEE;
   background: #F5ECF2;
-  border-color: #E25AB4;
+  border-color: #717EEE;
 }
 .high,
 .medium,

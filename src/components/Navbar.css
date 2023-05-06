@@ -37,3 +37,13 @@ form.search.dark input::placeholder {
 .notification.dark svg {
   stroke: #5F6365;
 }
+.hamburger {
+  display: none;
+}
+
+@media (max-width: 500px) {
+  .hamburger {
+    display: block;
+    margin-right: 15px;
+  }
+}

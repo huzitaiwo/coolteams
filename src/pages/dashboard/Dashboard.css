@@ -1,0 +1,24 @@
+.my__task {
+  background: #fff;
+  color: #25283B;
+  padding: 15px;
+  border-radius: 1rem;
+  margin-bottom: 30px;
+  box-shadow: 5px 5px 15px #F7F6F4;
+  height: fit-content;
+}
+.my__task.dark {
+  background: #2B2F33;
+  color: #fff;
+  border-color: #2B2F33;
+  box-shadow: none;
+}
+.my__task li {
+  list-style: none;
+  display: flex;
+  align-items: center; 
+}
+.my__task a  {
+  text-decoration: none;
+  color: #4B5563;
+}

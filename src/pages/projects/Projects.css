@@ -24,9 +24,6 @@
   justify-content: space-between;
   align-items: center;
 }
-.project__grid-header h3 {
-  font-weight: 600;
-}
 h3.project__status span {
   display: inline-block;
   color: #4b5563;

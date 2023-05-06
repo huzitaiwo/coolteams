@@ -10,14 +10,6 @@
 .project .project__details {
   font-size: 1.2rem;
 }
-.project__status {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  text-transform: uppercase;
-  font-weight: 500;
-  margin-bottom: 23px;
-}
 .project .project__image {
   height: 400px;
   border: 1px solid rgba(0, 0, 0, 0.1);

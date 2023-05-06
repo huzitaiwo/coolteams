@@ -79,3 +79,18 @@
     text-align: center;
   }
 }
+
+@media (max-width: 500px) {
+  .sidebar {
+    position: absolute;
+    width: 70%;
+    box-shadow: 5px 5px 15px #64666C;
+    display: none;
+  }
+  .navigation-links span {
+    display: initial;
+  }
+  .navigation-links a.active {
+    border-right: 4px solid #FD8B51;
+  }
+}
