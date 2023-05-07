@@ -19,13 +19,6 @@ const Comment = ({ project }) => {
   const [newComment, setNewComment ] = useState('')
   const { user } = useAuthContext()
   const { updateDocument, response } = useFirestore('projects')
-  // const assignedUsers = project.assignedUsersList.map(u => {
-  //   return u.uid
-  // })
-
-  project.comments.map(comment => {
-    console.log(user.uid, comment.userID)
-  })
 
   const handleSubmit =  async (e) => {
     e.preventDefault()
