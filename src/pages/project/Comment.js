@@ -23,6 +23,10 @@ const Comment = ({ project }) => {
   //   return u.uid
   // })
 
+  project.comments.map(comment => {
+    console.log(user.uid, comment.userID)
+  })
+
   const handleSubmit =  async (e) => {
     e.preventDefault()
 
@@ -31,7 +35,8 @@ const Comment = ({ project }) => {
       photoURL: user.photoURL,
       content: newComment,
       createdAt: timestamp.fromDate(new Date()),
-      id: uuid()
+      id: uuid(),
+      userID: user.uid
     }
 
     await updateDocument(project.id, {
@@ -51,7 +56,7 @@ const Comment = ({ project }) => {
 
           <ul>
             {project.comments && project.comments.map(comment => (
-              <li key={comment.id}>
+              <li key={comment.id} className={user.uid === comment.userID ? 'me' : ''}>
                 <div className="comment">
                   <Avatar src={comment.photoURL} />
                   <div>
