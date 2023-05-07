@@ -35,7 +35,7 @@
   box-shadow: 5px 5px 15px #F7F6F4;
 }
 .project__task-list:last-of-type {
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 .task__high {
   background: #FF7782;
