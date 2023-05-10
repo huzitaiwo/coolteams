@@ -1,17 +1,17 @@
 .project__card {
   display: block;
   text-decoration: none;
-  color: #25283B;
+  color: #25283b;
   background: #fff;
   border-radius: 1rem;
   border: 1px solid #fff;
   margin-bottom: 30px;
-  box-shadow: 5px 5px 15px #F7F6F4;
+  box-shadow: 5px 5px 15px #f7f6f4;
 }
 .project__card.dark {
-  background: #2B2F33;
+  background: #2b2f33;
   color: #fff;
-  border-color: #2B2F33;
+  border-color: #2b2f33;
   box-shadow: none;
 }
 .project__grid {
@@ -24,6 +24,9 @@
   justify-content: space-between;
   align-items: center;
 }
+h3.project__status {
+  margin-bottom: 15px;
+}
 h3.project__status span {
   display: inline-block;
   color: #4b5563;
@@ -32,7 +35,7 @@ h3.project__status span {
   margin-left: 10px;
 }
 .project__status.dark span {
-  color: #F7F6F4;
+  color: #f7f6f4;
 }
 
 /* media query */

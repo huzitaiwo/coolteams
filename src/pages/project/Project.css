@@ -23,28 +23,28 @@
   margin-top: 23px;
 }
 .project .avatar {
- margin-left: -7px;
- width: 50px;
- height: 50px;
+  margin-left: -7px;
+  width: 50px;
+  height: 50px;
 }
 .project__task {
   padding: 10px 15px;
   border-radius: 10px;
   color: #fff;
   margin-bottom: 10px;
-  box-shadow: 5px 5px 15px #F7F6F4;
+  box-shadow: 5px 5px 15px #f7f6f4;
 }
 .project__task-list:last-of-type {
   margin-bottom: 0;
 }
 .task__high {
-  background: #FF7782;
+  background: #ff7782;
 }
 .task__medium {
-  background: #FFBB55;
+  background: #ffbb55;
 }
 .task__low {
-  background: #717EEE;
+  background: #717eee;
 }
 .task__name {
   font-size: 1.2rem;
@@ -65,7 +65,6 @@
 .tags li {
   margin-right: 10px;
 }
-
 .project__comments h3,
 .project__tasks-list h3 {
   text-transform: uppercase;
@@ -74,16 +73,18 @@
 .project h3 small {
   font-size: 12px;
   text-transform: none;
-  color: #5F6365;
+  color: #5f6365;
   margin-left: 10px;
 }
-.project__comments li
-{
-  background: #FFF;
+.project__comments ul {
+  margin-bottom: 30px;
+}
+.project__comments li {
+  background: #fff;
   padding: 15px;
   border-radius: 10px;
   margin-bottom: 10px;
-  box-shadow: 5px 5px 15px #F7F6F4;
+  box-shadow: 5px 5px 15px #f7f6f4;
   width: fit-content;
 }
 .project__comments label {
@@ -91,7 +92,7 @@
   align-items: center;
   background: #fff;
   border-radius: 7px;
-  box-shadow: 5px 5px 15px #F7F6F4;
+  box-shadow: 5px 5px 15px #f7f6f4;
 }
 .project__comments textarea {
   flex: 1;
@@ -122,15 +123,15 @@
 }
 .comment__time {
   font-size: 10px;
-  color: #EDF1FF;
+  color: #cecfd7;
 }
 .send {
-  background: #FD7B38;
+  background: #fd7b38;
   display: block;
   height: 100%;
   padding: 5px;
   border-radius: 0 7px 7px 0;
-  outline-color:#FD8B51;
+  outline-color: #fd8b51;
 }
 .send svg {
   stroke: #fff;
@@ -138,18 +139,18 @@
 
 /* dark mode */
 .project__comments.dark li,
-.project__comments.dark label, 
-.project__comments.dark textarea  {
-  background: #5F6365;
+.project__comments.dark label,
+.project__comments.dark textarea {
+  background: #5f6365;
   color: #fff;
   box-shadow: none;
 }
 .project__comments.dark .comment__time {
-  color: #E3E4E4;
+  color: #e3e4e4;
 }
 .send.dark {
-  background: #FD413C;
-  outline-color:#FD413C;
+  background: #fd413c;
+  outline-color: #fd413c;
 }
 .project__task.dark {
   box-shadow: none;
@@ -158,5 +159,8 @@
 @media (max-width: 900px) {
   .project {
     grid-template-columns: 1fr;
+  }
+  .project__comments {
+    margin-bottom: 10px;
   }
 }
